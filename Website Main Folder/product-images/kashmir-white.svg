@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Replace this dummy Kashmir White granite image with a real product photo">
+  <defs>
+    <radialGradient id="bg" cx="45%" cy="45%" r="75%"><stop offset="0" stop-color="#f2eee5"/><stop offset="0.6" stop-color="#cbc7bd"/><stop offset="1" stop-color="#8f908a"/></radialGradient>
+    <filter id="speckle"><feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="5"/><feColorMatrix values="0 0 0 0 0.34 0 0 0 0 0.32 0 0 0 0 0.30 0 0 0 .38 0"/></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" filter="url(#speckle)" opacity="0.75"/>
+  <circle cx="245" cy="185" r="16" fill="#8d4b42" opacity="0.65"/><circle cx="890" cy="260" r="22" fill="#7b3f38" opacity="0.5"/><circle cx="680" cy="605" r="18" fill="#93564a" opacity="0.55"/>
+  <text x="600" y="392" font-family="Arial, sans-serif" font-size="44" letter-spacing="8" text-anchor="middle" fill="#4d4c47">KASHMIR WHITE</text>
+  <text x="600" y="450" font-family="Arial, sans-serif" font-size="24" letter-spacing="4" text-anchor="middle" fill="#5c5a54">REPLACE THIS FILE</text>
+</svg>
+

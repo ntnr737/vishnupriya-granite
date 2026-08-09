@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Replace this dummy marble image with a real product photo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbfaf6"/><stop offset="0.55" stop-color="#e8e1d7"/><stop offset="1" stop-color="#fffdf8"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.08"/></feComponentTransfer></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" filter="url(#grain)" opacity="0.6"/>
+  <path d="M-80 240 C180 140 310 390 535 295 S845 115 1300 210" fill="none" stroke="#b7aa98" stroke-width="10" opacity="0.45"/>
+  <path d="M-60 520 C230 430 380 615 620 515 S925 380 1280 480" fill="none" stroke="#d1c6b8" stroke-width="7" opacity="0.7"/>
+  <path d="M160 80 C380 200 475 40 710 145 S965 300 1190 190" fill="none" stroke="#9d8d7b" stroke-width="4" opacity="0.35"/>
+  <text x="600" y="392" font-family="Arial, sans-serif" font-size="44" letter-spacing="8" text-anchor="middle" fill="#897a66">MARBLE IMAGE</text>
+  <text x="600" y="450" font-family="Arial, sans-serif" font-size="24" letter-spacing="4" text-anchor="middle" fill="#9f927f">REPLACE THIS FILE</text>
+</svg>
+
