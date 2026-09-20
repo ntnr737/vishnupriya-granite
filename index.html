@@ -1544,6 +1544,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button class="blog-cat-btn px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('pricing', this)">Pricing & Cost</button>
         <button class="blog-cat-btn px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('comparison', this)">Material Comparisons</button>
         <button class="blog-cat-btn px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('design', this)">Exterior & Design</button>
+        <button class="blog-cat-btn px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('maintenance', this)">Care & Maintenance</button>
+        <button class="blog-cat-btn px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('installation', this)">Technical & Installation</button>
       </div>
 
       <!-- Blog Grid -->
@@ -2383,175 +2385,629 @@ function sendWhatsAppEstimate() {
 
 // ==================== BLOGS DATA & ROUTING ====================
 const blogsData = {
-  'sadahalli-white-granite-buyers-guide': {
-    slug: 'sadahalli-white-granite-buyers-guide',
-    title: "Sadahalli White Granite: Ultimate Buyer's Guide, Price & Applications in Bangalore",
-    category: 'buying-guide',
-    categoryName: 'Buying Guide & Local Granite',
-    author: 'Bikram Rai, Vishnupriya Granite',
-    date: 'September 20, 2026',
-    readTime: '7 min read',
-    img: 'product-images/white-granite.png',
-    excerpt: "Everything you need to know about Sadahalli White Granite sourced directly from Sadahalli quarries in Bangalore North: mineral properties, slab pricing (INR 65-140/sq.ft), finishes, and countertop longevity.",
-    content: `
-      <p class="text-lg font-normal text-gray-800">Sadahalli White Granite is widely recognized across Karnataka and South India as one of the most durable, aesthetically versatile, and cost-effective natural stones available. Quarried in the mineral-rich belt of <strong>Sadahalli Post, Bangalore North</strong>, this signature granite has become the top choice for residential homeowners, commercial developers, architects, and interior designers.</p>
-      
-      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">1. Geological Composition & Physical Characteristics</h3>
-      <p>Sadahalli White Granite features a bright, clean white feldspar matrix sprinkled with subtle grey quartz veins and fine black biotite specks. Unlike imported engineered quartz, Sadahalli Granite is 100% natural igneous rock formed under intense heat and pressure over millions of years.</p>
-      <ul class="list-disc pl-6 space-y-2">
-        <td><strong>Mohs Hardness:</strong> 6.5 to 7 (Highly scratch-resistant against steel knives and heavy cookware).</td>
-        <td><strong>Water Absorption Rate:</strong> Less than 0.18% (Extremely low porosity prevents water staining and mold growth).</td>
-        <td><strong>Density:</strong> ~2.65 g/cm³ (Outstanding structural load tolerance for high-footfall flooring).</td>
-      </ul>
-
-      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">2. Available Slab Sizes & Surface Finishes</h3>
-      <p>At Vishnupriya Granite's Sadahalli processing yard, we cut and finish Sadahalli White Granite into a variety of formats tailored to your architectural brief:</p>
-      <ul class="list-disc pl-6 space-y-2">
-        <td><strong>Gangsaw Slabs:</strong> Large format slabs (10ft &times; 6ft, 9ft &times; 5.5ft) in 18mm, 20mm, and 30mm thickness. Ideal for seamless kitchen island countertops and continuous hall flooring.</td>
-        <td><strong>Cutter Slabs & Tiles:</strong> Pre-cut 8ft &times; 3ft slabs and 2ft &times; 2ft floor tiles for quick installation.</td>
-        <td><strong>Polished Finish:</strong> High-gloss mirror polish enhancing the natural white brilliance for indoor kitchens, vanities, and lobbies.</td>
-        <td><strong>Honed Finish:</strong> Satin matte texture offering a contemporary tactile surface for calm bathrooms and wall cladding.</td>
-        <td><strong>Flamed / Thermal Finish:</strong> Rough, anti-skid texture specifically engineered for outdoor driveways, courtyards, swimming pool decks, and stair steps.</td>
-      </ul>
-
-      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">3. Sadahalli White Granite Price List in Bangalore</h3>
-      <p>Because Vishnupriya Granite operates directly out of Sadahalli, Bangalore North, we eliminate middleman dealer markups. Current factory-direct pricing for Sadahalli White Granite in Bangalore ranges from <strong>&#8377;65 to &#8377;140 per sq.ft</strong> depending on slab thickness, polish grade, and lot size uniformity.</p>
-
-      <div class="bg-amber-50 border-l-4 border-amber-600 p-4 my-6">
-        <p class="font-semibold text-amber-900">Pro Tip for Homebuilders:</p>
-        <p class="text-sm text-amber-800">Always inspect full Gangsaw slabs under natural sunlight at our Sadahalli yard to verify grain consistency across your required lot size before cutting.</p>
-      </div>
-    `
+  "sadahalli-white-granite-buyers-guide": {
+    "slug": "sadahalli-white-granite-buyers-guide",
+    "title": "Sadahalli White Granite: Ultimate Buyer's Guide, Price & Applications in Bangalore",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 20, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/white-granite.png",
+    "excerpt": "Everything you need to know about Sadahalli White Granite sourced directly from Sadahalli quarries in Bangalore North: mineral properties, slab pricing (INR 65-140/sq.ft), finishes, and countertop longevity.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Sadahalli White Granite is widely recognized across Karnataka and South India as one of the most durable, aesthetically versatile, and cost-effective natural stones available. Quarried in the mineral-rich belt of <strong>Sadahalli Post, Bangalore North</strong>, this signature granite has become the top choice for residential homeowners, commercial developers, architects, and interior designers.</p>\n        <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">1. Geological Composition & Physical Characteristics</h3>\n        <p>Sadahalli White Granite features a bright, clean white feldspar matrix sprinkled with subtle grey quartz veins and fine black biotite specks. Unlike imported engineered quartz, Sadahalli Granite is 100% natural igneous rock formed under intense heat and pressure over millions of years.</p>\n        <ul class=\"list-disc pl-6 space-y-2\">\n          <li><strong>Mohs Hardness:</strong> 6.5 to 7 (Highly scratch-resistant against steel knives and heavy cookware).</li>\n          <li><strong>Water Absorption Rate:</strong> Less than 0.18% (Extremely low porosity prevents water staining and mold growth).</li>\n          <li><strong>Density:</strong> ~2.65 g/cm\u00b3 (Outstanding structural load tolerance for high-footfall flooring).</li>\n        </ul>\n        <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">2. Available Slab Sizes & Surface Finishes</h3>\n        <p>At Vishnupriya Granite's Sadahalli processing yard, we cut and finish Sadahalli White Granite into a variety of formats tailored to your architectural brief:</p>\n        <ul class=\"list-disc pl-6 space-y-2\">\n          <li><strong>Gangsaw Slabs:</strong> Large format slabs (10ft &times; 6ft, 9ft &times; 5.5ft) in 18mm, 20mm, and 30mm thickness. Ideal for seamless kitchen island countertops and continuous hall flooring.</li>\n          <li><strong>Cutter Slabs & Tiles:</strong> Pre-cut 8ft &times; 3ft slabs and 2ft &times; 2ft floor tiles for quick installation.</li>\n          <li><strong>Polished Finish:</strong> High-gloss mirror polish enhancing the natural white brilliance for indoor kitchens, vanities, and lobbies.</li>\n          <li><strong>Honed Finish:</strong> Satin matte texture offering a contemporary tactile surface for calm bathrooms and wall cladding.</li>\n          <li><strong>Flamed / Thermal Finish:</strong> Rough, anti-skid texture specifically engineered for outdoor driveways, courtyards, swimming pool decks, and stair steps.</li>\n        </ul>\n        <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">3. Sadahalli White Granite Price List in Bangalore</h3>\n        <p>Because Vishnupriya Granite operates directly out of Sadahalli, Bangalore North, we eliminate middleman dealer markups. Current factory-direct pricing for Sadahalli White Granite in Bangalore ranges from <strong>&#8377;65 to &#8377;140 per sq.ft</strong> depending on slab thickness, polish grade, and lot size uniformity.</p>\n        <div class=\"bg-amber-50 border-l-4 border-amber-600 p-4 my-6\">\n          <p class=\"font-semibold text-amber-900\">Pro Tip for Homebuilders:</p>\n          <p class=\"text-sm text-amber-800\">Always inspect full Gangsaw slabs under natural sunlight at our Sadahalli yard to verify grain consistency across your required lot size before cutting.</p>\n        </div>"
   },
-  'granite-vs-marble-countertops-bangalore': {
-    slug: 'granite-vs-marble-countertops-bangalore',
-    title: 'Granite vs Marble Countertops: Which is Best for Bangalore Kitchens & Climate?',
-    category: 'comparison',
-    categoryName: 'Material Comparison',
-    author: 'Stone Experts Team, Vishnupriya Granite',
-    date: 'September 18, 2026',
-    readTime: '6 min read',
-    img: 'product-images/black-galaxy.png',
-    excerpt: 'Comparing natural Granite vs Marble for South Indian kitchen countertops: heat tolerance, turmeric stain resistance, maintenance, and long-term cost analysis per square foot.',
-    content: `
-      <p class="text-lg font-normal text-gray-800">Choosing the right stone surface for your kitchen countertop or flooring is one of the most critical decisions in residential interior design. In Bangalore homes, countertops must withstand heavy everyday cooking, hot kadais, spicy masalas, and citrus acids.</p>
-
-      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">Granite vs. Marble: Key Performance Matrix</h3>
-      <div class="overflow-x-auto my-6">
-        <table class="w-full text-sm text-left border-collapse border border-gray-200">
-          <thead class="bg-emerald-950 text-white">
-            <tr>
-              <th class="p-3 border border-gray-300">Feature</th>
-              <th class="p-3 border border-gray-300">Natural Granite (Sadahalli / Black Galaxy)</th>
-              <th class="p-3 border border-gray-300">Natural Marble (Makrana / Italian)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b">
-              <td class="p-3 font-semibold bg-gray-50 border">Hardness & Scratch Resistance</td>
-              <td class="p-3 border text-emerald-800 font-medium">Very High (Mohs 6.5–7) — Knife resistant</td>
-              <td class="p-3 border text-amber-800">Medium (Mohs 3–4) — Prone to scratches</td>
-            </tr>
-            <tr class="border-b">
-              <td class="p-3 font-semibold bg-gray-50 border">Stain & Chemical Resistance</td>
-              <td class="p-3 border text-emerald-800 font-medium">Resists turmeric, lemon juice, oil & vinegar</td>
-              <td class="p-3 border text-amber-800">Metamorphic calcium carbonate etches with acids</td>
-            </tr>
-            <tr class="border-b">
-              <td class="p-3 font-semibold bg-gray-50 border">Heat Resistance</td>
-              <td class="p-3 border text-emerald-800 font-medium">Withstands direct hot cookpans (> 250&deg;C)</td>
-              <td class="p-3 border text-amber-800">Can scorch or crack under rapid heat change</td>
-            </tr>
-            <tr class="border-b">
-              <td class="p-3 font-semibold bg-gray-50 border">Average Price Range</td>
-              <td class="p-3 border">&#8377;65 – &#8377;260 / sq.ft</td>
-              <td class="p-3 border">&#8377;120 – &#8377;550 / sq.ft</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">The Verdict for Bangalore Kitchens</h3>
-      <p>For active Indian kitchens where turmeric, tamarind, ghee, and heavy steel cookware are daily staples, <strong>Granite (such as Sadahalli White or Black Galaxy)</strong> is by far the superior choice. Marble remains ideal for prayer rooms (Pooja rooms), formal living room flooring, and accent wall cladding where acidic spills do not occur.</p>
-    `
+  "granite-vs-marble-countertops-bangalore": {
+    "slug": "granite-vs-marble-countertops-bangalore",
+    "title": "Granite vs Marble Countertops: Which is Best for Bangalore Kitchens & Climate?",
+    "category": "comparison",
+    "categoryName": "Material Comparison",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 18, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/black-galaxy.png",
+    "excerpt": "Comparing natural Granite vs Marble for South Indian kitchen countertops: heat tolerance, turmeric stain resistance, maintenance, and long-term cost analysis per square foot.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Choosing the right stone surface for your kitchen countertop or flooring is one of the most critical decisions in residential interior design. In Bangalore homes, countertops must withstand heavy everyday cooking, hot kadais, spicy masalas, and citrus acids.</p>\n        <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">Granite vs. Marble: Key Performance Matrix</h3>\n        <div class=\"overflow-x-auto my-6\">\n          <table class=\"w-full text-sm text-left border-collapse border border-gray-200\">\n            <thead class=\"bg-emerald-950 text-white\">\n              <tr>\n                <th class=\"p-3 border border-gray-300\">Feature</th>\n                <th class=\"p-3 border border-gray-300\">Natural Granite (Sadahalli / Black Galaxy)</th>\n                <th class=\"p-3 border border-gray-300\">Natural Marble (Makrana / Italian)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr class=\"border-b\">\n                <td class=\"p-3 font-semibold bg-gray-50 border\">Hardness & Scratch Resistance</td>\n                <td class=\"p-3 border text-emerald-800 font-medium\">Very High (Mohs 6.5\u20137) \u2014 Knife resistant</td>\n                <td class=\"p-3 border text-amber-800\">Medium (Mohs 3\u20134) \u2014 Prone to scratches</td>\n              </tr>\n              <tr class=\"border-b\">\n                <td class=\"p-3 font-semibold bg-gray-50 border\">Stain & Chemical Resistance</td>\n                <td class=\"p-3 border text-emerald-800 font-medium\">Resists turmeric, lemon juice, oil & vinegar</td>\n                <td class=\"p-3 border text-amber-800\">Metamorphic calcium carbonate etches with acids</td>\n              </tr>\n              <tr class=\"border-b\">\n                <td class=\"p-3 font-semibold bg-gray-50 border\">Heat Resistance</td>\n                <td class=\"p-3 border text-emerald-800 font-medium\">Withstands direct hot cookpans (&gt; 250&deg;C)</td>\n                <td class=\"p-3 border text-amber-800\">Can scorch or crack under rapid heat change</td>\n              </tr>\n              <tr class=\"border-b\">\n                <td class=\"p-3 font-semibold bg-gray-50 border\">Average Price Range</td>\n                <td class=\"p-3 border\">&#8377;65 \u2013 &#8377;260 / sq.ft</td>\n                <td class=\"p-3 border\">&#8377;120 \u2013 &#8377;550 / sq.ft</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">The Verdict for Bangalore Kitchens</h3>\n        <p>For active Indian kitchens where turmeric, tamarind, ghee, and heavy steel cookware are daily staples, <strong>Granite (such as Sadahalli White or Black Galaxy)</strong> is by far the superior choice. Marble remains ideal for prayer rooms (Pooja rooms), formal living room flooring, and accent wall cladding where acidic spills do not occur.</p>"
   },
-  'granite-slab-price-list-bangalore-2026': {
-    slug: 'granite-slab-price-list-bangalore-2026',
-    title: 'Granite Slab Price List in Bangalore (2026 Edition): Sadahalli, Black Galaxy & Kashmir White',
-    category: 'pricing',
-    categoryName: 'Pricing & Cost Guide',
-    author: 'Bikram Rai, Vishnupriya Granite',
-    date: 'September 15, 2026',
-    readTime: '8 min read',
-    img: 'product-images/tan-brown.png',
-    excerpt: 'Comprehensive factory-direct granite price guide for Bangalore in 2026. Includes cost per sq.ft for Sadahalli White, Black Galaxy, Kashmir White, Tan Brown, Absolute Black & Kota stone.',
-    content: `
-      <p class="text-lg font-normal text-gray-800">Planning a home construction or renovation budget in Bangalore requires reliable, transparent pricing on natural stone materials. Below is the official 2026 factory-direct granite price guide provided by Vishnupriya Granite (Sadahalli Post, Bangalore North).</p>
-
-      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">Bangalore Natural Stone Price Benchmark (2026)</h3>
-      <ul class="space-y-3 my-6">
-        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
-          <div>
-            <strong class="text-gray-900 block">Sadahalli White Granite</strong>
-            <span class="text-xs text-gray-500">Local Bangalore North Quarry &middot; Gangsaw / Cutter Slabs</span>
-          </div>
-          <span class="text-emerald-700 font-bold text-lg">&#8377;65 &ndash; &#8377;140 / sq.ft</span>
-        </li>
-        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
-          <div>
-            <strong class="text-gray-900 block">Black Galaxy Granite</strong>
-            <span class="text-xs text-gray-500">Andhra Pradesh Quarry &middot; Gold Flake Mirror Polish</span>
-          </div>
-          <span class="text-emerald-700 font-bold text-lg">&#8377;140 &ndash; &#8377;260 / sq.ft</span>
-        </li>
-        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
-          <div>
-            <strong class="text-gray-900 block">Kashmir White Granite</strong>
-            <span class="text-xs text-gray-500">Rajasthan Quarry &middot; Garnet Inclusions</span>
-          </div>
-          <span class="text-emerald-700 font-bold text-lg">&#8377;110 &ndash; &#8377;190 / sq.ft</span>
-        </li>
-        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
-          <div>
-            <strong class="text-gray-900 block">Tan Brown Granite</strong>
-            <span class="text-xs text-gray-500">Andhra Pradesh Quarry &middot; Rich Chocolate Feldspar</span>
-          </div>
-          <span class="text-emerald-700 font-bold text-lg">&#8377;95 &ndash; &#8377;165 / sq.ft</span>
-        </li>
-        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
-          <div>
-            <strong class="text-gray-900 block">Kota Stone Slabs & Tiles</strong>
-            <span class="text-xs text-gray-500">Rajasthan Quarry &middot; Blue / Green Natural Limestone</span>
-          </div>
-          <span class="text-emerald-700 font-bold text-lg">&#8377;35 &ndash; &#8377;75 / sq.ft</span>
-        </li>
-      </ul>
-
-      <p class="text-sm text-gray-600 mt-4">Note: Prices vary based on slab thickness (18mm vs 20mm), polish grade, and lot size uniformity. For exact project estimates, use our <a href="#" onclick="openEstimator();return false;" class="text-amber-700 underline font-medium">Instant Granite Calculator</a>.</p>
-    `
+  "granite-slab-price-list-bangalore-2026": {
+    "slug": "granite-slab-price-list-bangalore-2026",
+    "title": "Granite Slab Price List in Bangalore (2026 Edition): Sadahalli, Black Galaxy & Kashmir White",
+    "category": "pricing",
+    "categoryName": "Pricing & Cost Guide",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 15, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/tan-brown.png",
+    "excerpt": "Comprehensive factory-direct granite price guide for Bangalore in 2026. Includes cost per sq.ft for Sadahalli White, Black Galaxy, Kashmir White, Tan Brown, Absolute Black & Kota stone.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Planning a home construction or renovation budget in Bangalore requires reliable, transparent pricing on natural stone materials. Below is the official 2026 factory-direct granite price guide provided by Vishnupriya Granite (Sadahalli Post, Bangalore North).</p>\n        <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">Bangalore Natural Stone Price Benchmark (2026)</h3>\n        <ul class=\"space-y-3 my-6\">\n          <li class=\"p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center\">\n            <div>\n              <strong class=\"text-gray-900 block\">Sadahalli White Granite</strong>\n              <span class=\"text-xs text-gray-500\">Local Bangalore North Quarry &middot; Gangsaw / Cutter Slabs</span>\n            </div>\n            <span class=\"text-emerald-700 font-bold text-lg\">&#8377;65 &ndash; &#8377;140 / sq.ft</span>\n          </li>\n          <li class=\"p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center\">\n            <div>\n              <strong class=\"text-gray-900 block\">Black Galaxy Granite</strong>\n              <span class=\"text-xs text-gray-500\">Andhra Pradesh Quarry &middot; Gold Flake Mirror Polish</span>\n            </div>\n            <span class=\"text-emerald-700 font-bold text-lg\">&#8377;140 &ndash; &#8377;260 / sq.ft</span>\n          </li>\n          <li class=\"p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center\">\n            <div>\n              <strong class=\"text-gray-900 block\">Kashmir White Granite</strong>\n              <span class=\"text-xs text-gray-500\">Rajasthan Quarry &middot; Garnet Inclusions</span>\n            </div>\n            <span class=\"text-emerald-700 font-bold text-lg\">&#8377;110 &ndash; &#8377;190 / sq.ft</span>\n          </li>\n          <li class=\"p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center\">\n            <div>\n              <strong class=\"text-gray-900 block\">Tan Brown Granite</strong>\n              <span class=\"text-xs text-gray-500\">Andhra Pradesh Quarry &middot; Rich Chocolate Feldspar</span>\n            </div>\n            <span class=\"text-emerald-700 font-bold text-lg\">&#8377;95 &ndash; &#8377;165 / sq.ft</span>\n          </li>\n          <li class=\"p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center\">\n            <div>\n              <strong class=\"text-gray-900 block\">Kota Stone Slabs & Tiles</strong>\n              <span class=\"text-xs text-gray-500\">Rajasthan Quarry &middot; Blue / Green Natural Limestone</span>\n            </div>\n            <span class=\"text-emerald-700 font-bold text-lg\">&#8377;35 &ndash; &#8377;75 / sq.ft</span>\n          </li>\n        </ul>\n        <p class=\"text-sm text-gray-600 mt-4\">Note: Prices vary based on slab thickness (18mm vs 20mm), polish grade, and lot size uniformity.</p>"
   },
-  'exterior-paving-stones-bangalore-sadahalli-kota': {
-    slug: 'exterior-paving-stones-bangalore-sadahalli-kota',
-    title: 'Top 5 Exterior Paving Stones for Bangalore Homes: Sadahalli Granite, Kota Stone & Slate',
-    category: 'design',
-    categoryName: 'Exterior & Design',
-    author: 'Architectural Stone Consultant, Vishnupriya Granite',
-    date: 'September 10, 2026',
-    readTime: '5 min read',
-    img: 'product-images/kota-stone.png',
-    excerpt: 'Guide to choosing weather-resistant, anti-skid natural stone paving for Bangalore driveways, villa courtyards, porticos, and garden pathways.',
-    content: `
-      <p class="text-lg font-normal text-gray-800">Bangalore's rainy monsoon seasons and sunny climate require durable, high-friction outdoor paving materials that resist slipping, water pooling, and vehicle tire wear.</p>
-
-      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">1. Flamed Sadahalli White Granite</h3>
-      <p>Thermal flamed Sadahalli Granite is the ultimate choice for luxury villa driveways and porticos. The high-temperature torching process burst open surface quartz crystals, creating an elegant rough texture that offers 100% anti-slip safety even when soaked in monsoon rains.</p>
-
-      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">2. Natural Kota Stone</h3>
-      <p>Kota stone limestone provides a cool, earthy green-blue aesthetic for garden walkways, verandahs, and courtyards. It remains naturally cool under foot during hot summer months.</p>
-
-      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">3. Indian Multi-Slate</h3>
-      <p>Rich rustic slate tiles with natural cleft textures bring warm copper, charcoal, and gold hues to outdoor feature walls, boundary pillars, and swimming pool surroundings.</p>
-    `
+  "exterior-paving-stones-bangalore-sadahalli-kota": {
+    "slug": "exterior-paving-stones-bangalore-sadahalli-kota",
+    "title": "Top 5 Exterior Paving Stones for Bangalore Homes: Sadahalli Granite, Kota Stone & Slate",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 10, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/kota-stone.png",
+    "excerpt": "Guide to choosing weather-resistant, anti-skid natural stone paving for Bangalore driveways, villa courtyards, porticos, and garden pathways.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Bangalore's rainy monsoon seasons and sunny climate require durable, high-friction outdoor paving materials that resist slipping, water pooling, and vehicle tire wear.</p>\n        <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">1. Flamed Sadahalli White Granite</h3>\n        <p>Thermal flamed Sadahalli Granite is the ultimate choice for luxury villa driveways and porticos. The high-temperature torching process burst open surface quartz crystals, creating an elegant rough texture that offers 100% anti-slip safety even when soaked in monsoon rains.</p>\n        <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">2. Natural Kota Stone</h3>\n        <p>Kota stone limestone provides a cool, earthy green-blue aesthetic for garden walkways, verandahs, and courtyards. It remains naturally cool under foot during hot summer months.</p>\n        <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">3. Indian Multi-Slate</h3>\n        <p>Rich rustic slate tiles with natural cleft textures bring warm copper, charcoal, and gold hues to outdoor feature walls, boundary pillars, and swimming pool surroundings.</p>"
+  },
+  "black-galaxy-granite-kitchen-countertops-bangalore": {
+    "slug": "black-galaxy-granite-kitchen-countertops-bangalore",
+    "title": "Black Galaxy Granite for Kitchen Countertops: Gold Specks, Prices & Maintenance",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 19, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/makrana-white.png",
+    "excerpt": "Discover why Black Galaxy granite with gold copper specks remains the top choice for Bangalore kitchen countertops. Includes pricing, slab sizing, and maintenance tips.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Black Galaxy Granite is world-renowned for its deep black background dotted with sparkling golden and copper-colored bronzite flakes. Sourced from the mineral quarries of Chimakurthy in South India, it brings regal sophistication to Bangalore kitchen countertops.</p>\n     <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">Why Black Galaxy is Perfect for Kitchens</h3>\n     <p>The high quartz density of Black Galaxy gives it extreme heat tolerance, allowing hot pots to be placed directly without scorch marks. Its dark tone hides light cooking stains while golden specks reflect recessed spotlighting beautifully.</p>\n     <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">Pricing & Slab Selection</h3>\n     <p>First-choice Gangsaw slabs range from &#8377;140 to &#8377;260 per sq.ft depending on golden flake density and dark field uniformity. Always insist on resin-treated, epoxy-backed slabs for long-term crack resistance.</p>"
+  },
+  "sadahalli-granite-quarry-bangalore-north-factory": {
+    "slug": "sadahalli-granite-quarry-bangalore-north-factory",
+    "title": "Inside Sadahalli Granite Quarries: How Local Stone is Processed in Bangalore North",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 18, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/rainforest-gold.png",
+    "excerpt": "Take a visual journey inside the famous Sadahalli granite quarrying belt near Devanahalli. Learn how raw blocks are mined, wire-sawn, and polished for construction.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Located just 25 kilometers north of central Bangalore near the International Airport, the Sadahalli quarrying region is Karnataka's primary source of durable white granite. Vishnupriya Granite operates processing yards right in Sadahalli Post.</p>\n     <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">From Bedrock to Gangsaw Slabs</h3>\n     <p>Using state-of-the-art diamond wire saws and silent chemical expansion demolition, huge 20-ton granite boulders are separated without internal micro-fractures. Slabs are then processed through Italian gangsaw machines and multi-head automatic polishers.</p>"
+  },
+  "flamed-granite-finish-driveways-staircase-bangalore": {
+    "slug": "flamed-granite-finish-driveways-staircase-bangalore",
+    "title": "Why Flamed Granite Finish is the Safety Benchmark for Bangalore Driveways & Stairs",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 18, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/jodhpur-pink.png",
+    "excerpt": "Learn how thermal flamed granite surface treatment creates non-slip outdoor flooring for Bangalore villas, staircases, and wet courtyard porticos.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Polished granite can become slippery when exposed to monsoon rain or car wash runoff. Flamed granite (also called thermal finish) solves this safety hazard completely.</p>\n     <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">The Flaming Process</h3>\n     <p>High-temperature oxy-acetylene flames are passed over raw granite slabs, causing surface silica crystals to expand and burst. The result is a natural, unpolished rough texture with exceptional grip.</p>"
+  },
+  "kashmir-white-granite-flooring-wall-cladding": {
+    "slug": "kashmir-white-granite-flooring-wall-cladding",
+    "title": "Kashmir White Granite: Elegant Creamy Slabs for Bangalore Luxury Living Rooms",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 18, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/kota-stone.png",
+    "excerpt": "Detailed guide to Kashmir White Granite. Discover its soft burgundy garnet flecks, light grey movement, slab costs, and floor tile installation best practices.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Kashmir White Granite offers a bright, airy aesthetic that visually expands living room interiors and hallway foyers. Its white-to-cream background features delicate grey waves and signature red garnet spots.</p>\n     <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">Design Combinations</h3>\n     <p>Pairs exceptionally well with modern dark teak furniture, brushed brass fittings, and emerald green indoor planter pots.</p>"
+  },
+  "tan-brown-granite-countertop-price-durability": {
+    "slug": "tan-brown-granite-countertop-price-durability",
+    "title": "Tan Brown Granite: Cost, Durability & Stain Resistance for High-Use Kitchens",
+    "category": "pricing",
+    "categoryName": "Pricing & Cost Guide",
+    "author": "Senior Quarry Engineer, Vishnupriya Granite",
+    "date": "September 17, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/indian-slate.png",
+    "excerpt": "Explore Tan Brown granite slab prices in Bangalore (INR 95-165/sq.ft). Learn why its rich chocolate brown tone is favored for heavy rental and commercial kitchens.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Tan Brown granite features a rich blend of dark brown, black, and burnt orange feldspar minerals. It is one of the most forgiving granite colors for high-traffic rental properties and commercial cafeterias.</p>"
+  },
+  "makrana-white-marble-flooring-bangalore": {
+    "slug": "makrana-white-marble-flooring-bangalore",
+    "title": "Makrana White Marble Flooring: Taj Mahal Quality Slabs Available in Bangalore",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 17, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/white-granite.png",
+    "excerpt": "Everything about authentic Makrana White Marble from Rajasthan. Learn about pure calcitic composition, zero water absorption, and lifelong luster for Bangalore temples & homes.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Makrana White Marble is India's prized architectural gem, famous for constructing the Taj Mahal and Victoria Memorial. Unlike imported porous marble, Makrana is 98% pure calcite stone that never turns yellow over time.</p>"
+  },
+  "rainforest-gold-marble-feature-wall-design": {
+    "slug": "rainforest-gold-marble-feature-wall-design",
+    "title": "Rainforest Gold Marble: Exotic Dendritic Stone for Bangalore Accent Walls",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 17, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/black-galaxy.png",
+    "excerpt": "Transform your living room wall with Rainforest Gold Marble. Learn about book-matching slabs, sealing requirements, and lighting setups for maximum visual impact.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Rainforest Gold Marble is a natural work of art. Featuring gold, brown, and subtle green hues crossed by dark brown webbed veins, no two slabs are ever identical.</p>"
+  },
+  "jodhpur-pink-sandstone-facade-cladding-bangalore": {
+    "slug": "jodhpur-pink-sandstone-facade-cladding-bangalore",
+    "title": "Jodhpur Pink Sandstone Facade Cladding: Traditional & Modern Architectural Uses",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 16, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/kashmir-white.png",
+    "excerpt": "How Jodhpur Pink Sandstone is used in Bangalore elevation designs, boundary wall pillars, garden gazebos, and heritage villa facades.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Brought from Rajasthan's sun-baked quarries, Jodhpur Pink Sandstone brings royal heritage warmth to contemporary South Indian architecture.</p>"
+  },
+  "kota-stone-flooring-cost-polishing-bangalore": {
+    "slug": "kota-stone-flooring-cost-polishing-bangalore",
+    "title": "Kota Stone Flooring in Bangalore: Cost Per Sq.Ft, Laying Techniques & Mirror Polish",
+    "category": "pricing",
+    "categoryName": "Pricing & Cost Guide",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 16, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/tan-brown.png",
+    "excerpt": "Complete breakdown of Kota Stone flooring costs in Bangalore (INR 35-75/sq.ft). Learn about natural split vs mirror polish finish, chemical washing, and laying costs.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Kota stone is India's most eco-friendly and economical natural flooring solution. Known for keeping indoor rooms cool during hot summer days, it is widely installed in schools, hospitals, and homes.</p>"
+  },
+  "indian-slate-stone-wall-cladding-waterfalls": {
+    "slug": "indian-slate-stone-wall-cladding-waterfalls",
+    "title": "Multi-Colour Indian Slate: Rustic Wall Cladding for Courtyards & Water Features",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Senior Quarry Engineer, Vishnupriya Granite",
+    "date": "September 16, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/makrana-white.png",
+    "excerpt": "Discover Indian Multi-Slate tiles for exterior accent walls, balcony cladding, swimming pool surrounds, and indoor water cascades.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Indian slate offers rich earthy tones of copper, green, gold, and plum. Its natural split texture creates eye-catching depth on exterior walls.</p>"
+  },
+  "granite-slab-thickness-18mm-vs-20mm": {
+    "slug": "granite-slab-thickness-18mm-vs-20mm",
+    "title": "18mm vs 20mm Granite Slab Thickness: Which One Should You Buy for Kitchen Counters?",
+    "category": "installation",
+    "categoryName": "Technical & Installation",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 15, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/rainforest-gold.png",
+    "excerpt": "Technical comparison between 18mm and 20mm granite slabs. Understand weight capacity, overhang support, edge profile molding, and price variance.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">When shopping for granite slabs in Bangalore, thickness is a major cost and structural factor. Standard Indian market thicknesses are 18mm and 20mm, with 30mm reserved for heavy exterior steps.</p>"
+  },
+  "how-to-clean-granite-countertops-turmeric-stains": {
+    "slug": "how-to-clean-granite-countertops-turmeric-stains",
+    "title": "How to Remove Turmeric Stains from White Granite Countertops: Step-by-Step Guide",
+    "category": "maintenance",
+    "categoryName": "Care & Maintenance",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 15, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/jodhpur-pink.png",
+    "excerpt": "Effective DIY methods to remove yellow turmeric, oil, and coffee stains from Sadahalli White and Kashmir White granite without etching the polish.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Turmeric (haldi) is a staple in Indian cooking, but its active compound curcumin can leave temporary yellow marks if left overnight on unsealed white granite.</p>\n     <h3 class=\"font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold\">Baking Soda & Hydrogen Peroxide Poultice</h3>\n     <p>Mix baking soda with 3% hydrogen peroxide into a thick paste. Spread over the stain, cover with plastic wrap for 24 hours, and wipe clean. The poultice pulls the pigment out of stone pores effortlessly.</p>"
+  },
+  "sadahalli-granite-for-compound-wall-coping": {
+    "slug": "sadahalli-granite-for-compound-wall-coping",
+    "title": "Sadahalli Granite Coping & Pillar Caps: Weatherproof Boundary Wall Solutions",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 15, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/kota-stone.png",
+    "excerpt": "Why Sadahalli Granite coping stones protect compound walls from rainwater seepage, moss growth, and cracked plaster in Bangalore climates.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Protecting your villa boundary wall from rainwater erosion is crucial. Sadahalli Granite coping stones provide a durable protective cap with drip grooves.</p>"
+  },
+  "granite-stair-riser-tread-molding-bangalore": {
+    "slug": "granite-stair-riser-tread-molding-bangalore",
+    "title": "Granite Staircase Design: Full Bullnose vs Half Bullnose Edge Profiles & Prices",
+    "category": "installation",
+    "categoryName": "Technical & Installation",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 14, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/indian-slate.png",
+    "excerpt": "Guide to granite staircase treads and risers. Edge profiles explained: Full Bullnose, Half Bullnose, Ogee, Chamfered, and Anti-slip grooving details.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Granite staircases are practically indestructible. Selecting the right edge profile ensures safety while enhancing the visual elegance of multi-story homes.</p>"
+  },
+  "waterproofing-granite-slabs-sealing-guide": {
+    "slug": "waterproofing-granite-slabs-sealing-guide",
+    "title": "Waterproofing & Sealing Granite Countertops: Essential Maintenance Routine",
+    "category": "maintenance",
+    "categoryName": "Care & Maintenance",
+    "author": "Senior Quarry Engineer, Vishnupriya Granite",
+    "date": "September 14, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/white-granite.png",
+    "excerpt": "How penetration sealers protect natural granite from moisture, oil stains, and bacteria. Water droplet test explained step by step.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Natural granite is porous on a microscopic scale. Applying a high-grade fluoropolymer penetrating sealer once every 12 to 18 months keeps countertops 100% stain-proof.</p>"
+  },
+  "best-granite-colours-for-small-modular-kitchens": {
+    "slug": "best-granite-colours-for-small-modular-kitchens",
+    "title": "Best Granite Colours for Small Modular Kitchens: Reflective Whites vs Sleek Blacks",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 14, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/black-galaxy.png",
+    "excerpt": "Color psychology and light reflection tips for selecting granite in compact Bangalore apartments and L-shaped modular kitchens.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">In compact 2BHK and 3BHK Bangalore apartments, light-colored granites like Sadahalli White bounce light across dark cabinetry, making rooms feel significantly larger.</p>"
+  },
+  "sadahalli-granite-vs-jelahalli-granite-comparison": {
+    "slug": "sadahalli-granite-vs-jelahalli-granite-comparison",
+    "title": "Sadahalli Granite vs Jelahalli Granite: Quality, Grain & Price Difference",
+    "category": "comparison",
+    "categoryName": "Material Comparison",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 13, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/kashmir-white.png",
+    "excerpt": "Comparing Sadahalli White granite with Jelahalli grey/pink granite. Differences in quarry origin, grain texture, strength, and price per sq.ft.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Bangalore North has multiple stone belts. Sadahalli Granite is known for its uniform white field, whereas Jelahalli stones often exhibit pinkish feldspar streaks.</p>"
+  },
+  "granite-vs-quartz-countertops-bangalore-heat": {
+    "slug": "granite-vs-quartz-countertops-bangalore-heat",
+    "title": "Granite vs Quartz Countertops in Bangalore: Synthetic Resin vs Natural Heat Resistance",
+    "category": "comparison",
+    "categoryName": "Material Comparison",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 13, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/tan-brown.png",
+    "excerpt": "Detailed comparison between natural Granite and engineered Quartz. Heat discoloration risks, resin yellowing under sunlight, and long-term value.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Engineered quartz contains up to 10% synthetic polyester resin, which can yellow when exposed to UV light or scorch when hot pans are placed directly on it. Natural granite has zero synthetic resins and withstands extreme heat effortlessly.</p>"
+  },
+  "gangsaw-slabs-vs-cutter-slabs-granite-pricing": {
+    "slug": "gangsaw-slabs-vs-cutter-slabs-granite-pricing",
+    "title": "Gangsaw Slabs vs Cutter Slabs: Understanding Granite Sizing & Waste Calculation",
+    "category": "pricing",
+    "categoryName": "Pricing & Cost Guide",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 13, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/makrana-white.png",
+    "excerpt": "Learn how Gangsaw slabs (10ft x 6ft) compare to Cutter slabs (8ft x 3ft) in price per sq.ft, seam reduction, and fabrication waste in Bangalore.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Understanding granite sizing formats saves thousands of rupees during project procurement. Large gangsaw slabs reduce join seams on kitchen islands, while cutter slabs offer budget economy for small counters.</p>"
+  },
+  "leather-finish-granite-countertops-tactile-trend": {
+    "slug": "leather-finish-granite-countertops-tactile-trend",
+    "title": "Leather Finish Granite: The Tactile, Anti-Fingerprint Trend Taking Bangalore by Storm",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Senior Quarry Engineer, Vishnupriya Granite",
+    "date": "September 12, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/rainforest-gold.png",
+    "excerpt": "Why textured leather finish granite is trending for modern kitchens, bar counters, and outdoor barbecue areas in Bangalore luxury homes.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Leather finish granite is produced by diamond-tipped abrasive brushes that remove soft minerals, leaving a warm, velvet-like textured surface that conceals fingerprints and smudges.</p>"
+  },
+  "sadahalli-granite-flooring-tiles-vs-vitrified-tiles": {
+    "slug": "sadahalli-granite-flooring-tiles-vs-vitrified-tiles",
+    "title": "Sadahalli Granite Flooring Tiles vs Vitrified Floor Tiles: Lifetime Value Analysis",
+    "category": "comparison",
+    "categoryName": "Material Comparison",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 12, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/jodhpur-pink.png",
+    "excerpt": "Comparing natural Sadahalli granite tiles against ceramic vitrified tiles: longevity, re-polishing capability, impact resistance, and resale value.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Vitrified tiles chip under heavy object drops and cannot be re-polished. Natural Sadahalli granite tiles last for generations and can be diamond polished repeatedly to look brand new.</p>"
+  },
+  "granite-window-sills-door-frames-bangalore": {
+    "slug": "granite-window-sills-door-frames-bangalore",
+    "title": "Granite Door Frames & Window Sills: Termite-Proof Modern Building Accessories",
+    "category": "installation",
+    "categoryName": "Technical & Installation",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 12, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/kota-stone.png",
+    "excerpt": "Why architects in Bangalore are replacing wooden door frames and window sills with waterproof, termite-free Sadahalli granite frames.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Wooden door frames swell during Bangalore monsoon months and attract termites. Solid granite door jambs and window sill slabs eliminate wood decay forever.</p>"
+  },
+  "cost-of-granite-flooring-per-sqft-bangalore": {
+    "slug": "cost-of-granite-flooring-per-sqft-bangalore",
+    "title": "Total Cost of Granite Flooring Per Sq.Ft in Bangalore: Stone + Laying + Polishing",
+    "category": "pricing",
+    "categoryName": "Pricing & Cost Guide",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 11, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/indian-slate.png",
+    "excerpt": "Complete cost estimator for granite flooring installation in Bangalore. Detailed breakdown of slab cost, cement mortar mix, labor charges, and mirror polishing.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Calculating the true cost of granite flooring involves three components: material cost per sq.ft, mason installation charges (INR 35-50/sq.ft), and final mirror polishing (INR 25-40/sq.ft).</p>"
+  },
+  "honed-finish-granite-bathroom-vanity-tops": {
+    "slug": "honed-finish-granite-bathroom-vanity-tops",
+    "title": "Honed Finish Granite for Bathroom Vanities: Soft Matte Aesthetics without Slipping",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 11, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/white-granite.png",
+    "excerpt": "Design ideas for honed granite vanity tops and master bathroom feature walls. Low sheen elegance paired with moisture resistance.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Honed granite offers a matte, non-reflective surface that exudes calm, spa-like luxury in modern bathroom interiors.</p>"
+  },
+  "sadahalli-granite-curb-stones-landscaping-bangalore": {
+    "slug": "sadahalli-granite-curb-stones-landscaping-bangalore",
+    "title": "Sadahalli Granite Curb Stones & Pavers for Commercial Landscaping",
+    "category": "installation",
+    "categoryName": "Technical & Installation",
+    "author": "Senior Quarry Engineer, Vishnupriya Granite",
+    "date": "September 11, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/black-galaxy.png",
+    "excerpt": "Heavy-duty Sadahalli granite curb stones, road borders, and cobblestones for IT parks, gated communities, and public infrastructure projects in Bangalore.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Sadahalli granite curb stones are heavy-duty natural stone borders that resist heavy vehicle impacts without cracking, making them ideal for Bangalore commercial tech parks.</p>"
+  },
+  "black-granite-countertop-sink-cutout-types": {
+    "slug": "black-granite-countertop-sink-cutout-types",
+    "title": "Top Cutout Types for Granite Countertops: Undermount vs Top-Mount Kitchen Sinks",
+    "category": "installation",
+    "categoryName": "Technical & Installation",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 10, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/kashmir-white.png",
+    "excerpt": "Comparing undermount vs top-mount sink installation on granite countertops. Edge polishing details, silicone sealing, and weight support brackets.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Undermount stainless steel or granite composite sinks create a seamless counter surface where food crumbs can be wiped straight into the basin without catching on sink rims.</p>"
+  },
+  "how-to-choose-granite-slabs-at-quarry-yard": {
+    "slug": "how-to-choose-granite-slabs-at-quarry-yard",
+    "title": "How to Select Defect-Free Granite Slabs at Factory Yards: Inspection Checklist",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 10, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/tan-brown.png",
+    "excerpt": "10-step inspection guide when buying granite slabs: checking for hairline fissures, epoxy resin patches, color variation, and thickness uniformity.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Visiting a factory stone yard can be overwhelming. Follow our expert checklist: wet the slab with water to reveal true color, check edges with a straight edge rule, and shine a torch at 45 degrees to spot resin fills.</p>"
+  },
+  "sadahalli-white-granite-temple-construction": {
+    "slug": "sadahalli-white-granite-temple-construction",
+    "title": "Sadahalli White Granite for Temple Architecture: Heritage Stone Carving & Pillars",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 10, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/makrana-white.png",
+    "excerpt": "Why Sadahalli White Granite is selected for traditional temple pillars, mandapam carving, and sacred idol pedestals across South India.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Natural granite has been India's sacred temple building material for over a thousand years. Sadahalli White Granite's high compressive strength allows intricate hand and machine carving.</p>"
+  },
+  "kitchen-island-granite-waterfall-edge-cost": {
+    "slug": "kitchen-island-granite-waterfall-edge-cost",
+    "title": "Kitchen Island Waterfall Edge Granite Countertops: Fabrication & Cost in Bangalore",
+    "category": "pricing",
+    "categoryName": "Pricing & Cost Guide",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 9, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/rainforest-gold.png",
+    "excerpt": "How waterfall edge granite countertops are fabricated. Miter joint cutting (45-degree bevel), vein matching, and cost per running foot in Bangalore.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">A waterfall countertop extends the top granite slab seamlessly down the vertical sides of a kitchen island, creating a bold architectural focal point.</p>"
+  },
+  "granite-wall-cladding-dry-grouting-vs-wet": {
+    "slug": "granite-wall-cladding-dry-grouting-vs-wet",
+    "title": "Granite Wall Cladding Systems: Dry Cladding Brackets vs Traditional Wet Mortar",
+    "category": "installation",
+    "categoryName": "Technical & Installation",
+    "author": "Senior Quarry Engineer, Vishnupriya Granite",
+    "date": "September 9, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/jodhpur-pink.png",
+    "excerpt": "Comparing stainless steel dry cladding clamp systems vs wet mortar for high-rise exterior granite facades in Bangalore.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">For building elevations above 15 feet, mechanical dry cladding using SS 304 clamps is mandatory in Bangalore to prevent stone slab detachment due to thermal expansion.</p>"
+  },
+  "granite-vs-vitrified-tiles-staircases-safety": {
+    "slug": "granite-vs-vitrified-tiles-staircases-safety",
+    "title": "Granite vs Vitrified Tiles for Staircases: Anti-Slip Grooving & Edge Protection",
+    "category": "comparison",
+    "categoryName": "Material Comparison",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 9, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/kota-stone.png",
+    "excerpt": "Why solid 20mm granite treads with double bullnose and brass inlay grooves are safer and more durable than fragile ceramic tile staircases.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Tile edges on stairs chip easily under footwear impact. Single-piece granite treads provide a solid, un-chippable step with custom anti-slip grooving.</p>"
+  },
+  "sadahalli-grey-granite-commercial-flooring": {
+    "slug": "sadahalli-grey-granite-commercial-flooring",
+    "title": "Sadahalli Grey Granite: Heavy-Duty Industrial & Mall Flooring Slabs",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 8, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/indian-slate.png",
+    "excerpt": "Explore Sadahalli Grey Granite for industrial factory floors, metro station walkways, shopping malls, and heavy machinery foundations.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Sadahalli Grey Granite offers supreme compressive strength (&gt; 200 MPa), making it ideal for heavy commercial loads and trolley traffic in warehouses and malls.</p>"
+  },
+  "marble-polishing-process-crystallization-bangalore": {
+    "slug": "marble-polishing-process-crystallization-bangalore",
+    "title": "Diamond Marble Polishing & Powder Crystallization: Restoring Gloss to Old Floors",
+    "category": "maintenance",
+    "categoryName": "Care & Maintenance",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 8, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/white-granite.png",
+    "excerpt": "Step-by-step guide to diamond pad grinding, oxalic acid crystallization, and resin coating for restoring dulled Makrana & Italian marble floors.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Restoring old marble floors involves multi-stage diamond grinding (grit 50 to 3000) followed by chemical powder crystallization for a glass-like mirror shine.</p>"
+  },
+  "granite-countertop-backsplash-height-ideas": {
+    "slug": "granite-countertop-backsplash-height-ideas",
+    "title": "Matching Granite Backsplash Height: Full Slab vs 4-Inch Riser Design Ideas",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 8, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/black-galaxy.png",
+    "excerpt": "Comparing full-height granite backsplash walls vs standard 4-inch stone risers behind kitchen hobs and sinks.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Running the same granite slab from counter all the way up to upper kitchen cabinets creates a seamless, grout-free wall that wipes clean easily from oil splatters.</p>"
+  },
+  "epoxy-resin-treatment-granite-slabs-explained": {
+    "slug": "epoxy-resin-treatment-granite-slabs-explained",
+    "title": "Epoxy Resin Netting on Granite Slabs: Reinforcement & Hairline Crack Prevention",
+    "category": "installation",
+    "categoryName": "Technical & Installation",
+    "author": "Senior Quarry Engineer, Vishnupriya Granite",
+    "date": "September 7, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/kashmir-white.png",
+    "excerpt": "Understanding fiberglass mesh netting and vacuum epoxy resin penetration on premium exotic granites before gangsaw cutting.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">High-grade granite processing involves vacuum epoxy resin treatment that seals natural micro-fissures, enhancing slab structural integrity during transit.</p>"
+  },
+  "sadahalli-granite-exports-global-shipping": {
+    "slug": "sadahalli-granite-exports-global-shipping",
+    "title": "Sadahalli Granite Exports: Slabs & Cut-to-Size Stones Shipped Worldwide from Bangalore",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 7, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/tan-brown.png",
+    "excerpt": "How Vishnupriya Granite packages and exports Sadahalli granite slabs in wooden crates to Middle East, USA, Europe, and Australia.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Sadahalli Granite is exported globally for international commercial projects, cut to precise metric sizes and shipped in fumigated wooden bundles from Chennai & Mangalore ports.</p>"
+  },
+  "sustainable-green-building-natural-stone-bangalore": {
+    "slug": "sustainable-green-building-natural-stone-bangalore",
+    "title": "Natural Stone in Sustainable Green Building (IGBC / LEED) Design in Bangalore",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 7, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/makrana-white.png",
+    "excerpt": "Why locally quarried Sadahalli granite has a low carbon footprint compared to carbon-intensive ceramic tiles and imported quartz.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Sourcing local Sadahalli granite within 30km of Bangalore construction sites reduces transportation emissions and earns valuable IGBC and LEED green building credits.</p>"
+  },
+  "granite-table-tops-dining-coffee-table-ideas": {
+    "slug": "granite-table-tops-dining-coffee-table-ideas",
+    "title": "Custom Granite Table Tops: Weatherproof Dining & Patio Furniture Crafting",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 6, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/rainforest-gold.png",
+    "excerpt": "Crafting custom granite dining tables, garden coffee tables, and outdoor bar tops that withstand rain and sunlight without fading.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Custom granite dining tops bring timeless luxury to modern homes. Being weatherproof, they can stay outdoors on open garden terraces year-round.</p>"
+  },
+  "soundproofing-granite-flooring-underlayment": {
+    "slug": "soundproofing-granite-flooring-underlayment",
+    "title": "Acoustic Underlayment for Granite Floors: Reducing Impact Noise in Apartments",
+    "category": "installation",
+    "categoryName": "Technical & Installation",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 6, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/jodhpur-pink.png",
+    "excerpt": "How cork and rubber acoustic soundproofing membranes under granite floor tiles deaden footfall noise in high-rise Bangalore apartments.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Installing acoustic underlayment beneath granite floor mortar absorbs impact sound, keeping multi-story apartment living quiet and peaceful.</p>"
+  },
+  "sadahalli-granite-benches-park-furniture": {
+    "slug": "sadahalli-granite-benches-park-furniture",
+    "title": "Sadahalli Granite Benches & Park Seating: Vandal-Proof Garden Furniture",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Senior Quarry Engineer, Vishnupriya Granite",
+    "date": "September 6, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/kota-stone.png",
+    "excerpt": "Designing solid Sadahalli granite benches, curved garden seating, and carved stone tables for villa gardens, parks, and residential layouts.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Solid granite outdoor benches are weather-proof, maintenance-free, and indestructible, offering comfortable seating for gated residential communities.</p>"
+  },
+  "granite-vs-concrete-pavers-driveway-durability": {
+    "slug": "granite-vs-concrete-pavers-driveway-durability",
+    "title": "Granite Pavers vs Concrete Interlocking Blocks: Tensile Strength & Longevity",
+    "category": "comparison",
+    "categoryName": "Material Comparison",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 5, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/indian-slate.png",
+    "excerpt": "Why 50mm granite cobbles outperform concrete driveway pavers in color retention, oil stain resistance, and 50+ year lifespan.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Concrete interlocking pavers fade under sun exposure and absorb car oil drips. Granite cobblestones maintain their natural color and resist vehicular oil stains permanently.</p>"
+  },
+  "how-to-repair-chipped-granite-edges": {
+    "slug": "how-to-repair-chipped-granite-edges",
+    "title": "How to Repair Chipped Granite Countertop Edges: Clear Epoxy Resin DIY Fix",
+    "category": "maintenance",
+    "categoryName": "Care & Maintenance",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 5, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/white-granite.png",
+    "excerpt": "Step-by-step DIY restoration guide to repair heavy pot impact chips on granite counter edges using clear acrylic resin and fine sandpaper.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Accidentally dropping a heavy cast iron kadai can chip granite counter edges. Filling the chip with UV-curable clear epoxy and buffing it flush makes repairs invisible.</p>"
+  },
+  "white-granite-yellowing-causes-prevention": {
+    "slug": "white-granite-yellowing-causes-prevention",
+    "title": "Why White Granite Yellows Over Time: Moisture Rust Prevention & Correct Sealers",
+    "category": "maintenance",
+    "categoryName": "Care & Maintenance",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 5, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/black-galaxy.png",
+    "excerpt": "Understanding iron oxide oxidation in white granite. How improper water trapping during installation causes yellowing and how to prevent it.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">White granite contains micro-traces of iron. If unsealed stone absorbs standing water, iron minerals oxidize into rust stains. Using penetrating stone sealers prevents this issue entirely.</p>"
+  },
+  "sadahalli-granite-monuments-tombstones": {
+    "slug": "sadahalli-granite-monuments-tombstones",
+    "title": "Sadahalli Granite for Memorial Monuments & Statues: High Weather Resistance",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Stone Experts Team, Vishnupriya Granite",
+    "date": "September 4, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/kashmir-white.png",
+    "excerpt": "Why fine-grained Sadahalli White & Grey granite is chosen for memorial monuments, carved statues, and commemorative headstones across South India.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Sadahalli granite's fine mineral matrix resists acid rain and weathering, ensuring laser-engraved lettering on monuments remains crisp for centuries.</p>"
+  },
+  "granite-cutting-tools-diamond-saw-blades": {
+    "slug": "granite-cutting-tools-diamond-saw-blades",
+    "title": "Diamond Saw Blades & Segmented Cutters: The Technology Behind Granite Processing",
+    "category": "installation",
+    "categoryName": "Technical & Installation",
+    "author": "Senior Quarry Engineer, Vishnupriya Granite",
+    "date": "September 4, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/tan-brown.png",
+    "excerpt": "An inside look at industrial diamond saw blade segments, water cooling jets, and CNC bridge saw machinery used at Vishnupriya Granite.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Cutting ultra-hard granite requires industrial diamond-grit saw blades operating with continuous water cooling to achieve clean, chip-free slab edges.</p>"
+  },
+  "granite-flooring-maintenance-commercial-buildings": {
+    "slug": "granite-flooring-maintenance-commercial-buildings",
+    "title": "Maintenance Schedule for Granite Flooring in High-Traffic Commercial Buildings",
+    "category": "maintenance",
+    "categoryName": "Care & Maintenance",
+    "author": "Interior Stone Specialist, Vishnupriya Granite",
+    "date": "September 4, 2026",
+    "readTime": "4 min read",
+    "img": "product-images/makrana-white.png",
+    "excerpt": "Daily, monthly, and annual maintenance routine for granite floors in IT parks, shopping centers, and office lobbies.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Implementing a structured maintenance schedule with neutral pH stone cleaners preserves high-gloss luster on commercial granite floors for decades.</p>"
+  },
+  "sadahalli-granite-bathroom-wall-niche-shelves": {
+    "slug": "sadahalli-granite-bathroom-wall-niche-shelves",
+    "title": "Granite Bathroom Niche Shelves & Shower Benches: Waterproof Elegance",
+    "category": "design",
+    "categoryName": "Exterior & Design",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "September 3, 2026",
+    "readTime": "5 min read",
+    "img": "product-images/rainforest-gold.png",
+    "excerpt": "Creating custom granite shower niches, corner shelves, and floating vanity slabs for modern wet-room bathroom layouts.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Granite shower niches provide elegant, hygienic recessed storage for shampoos and soaps that will never rust, rot, or leak water into wall cavities.</p>"
+  },
+  "bangalore-granite-market-guide-sadahalli-hub": {
+    "slug": "bangalore-granite-market-guide-sadahalli-hub",
+    "title": "The Bangalore Granite Market Guide: Why Sadahalli Post is the Primary Wholesale Hub",
+    "category": "buying-guide",
+    "categoryName": "Buying Guide & Local Granite",
+    "author": "Architectural Stone Consultant, Vishnupriya Granite",
+    "date": "September 3, 2026",
+    "readTime": "6 min read",
+    "img": "product-images/jodhpur-pink.png",
+    "excerpt": "Why homebuilders bypass retail showrooms to buy factory-direct granite slabs directly from Sadahalli wholesale yards in Bangalore North.",
+    "content": "<p class=\"text-lg font-normal text-gray-800\">Buying granite directly from processing yards in Sadahalli Post saves homebuilders 30% to 40% compared to retail city showrooms while giving access to full lot selection.</p>"
   }
 };
 
