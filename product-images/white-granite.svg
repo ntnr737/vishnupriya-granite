@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="White Granite placeholder image">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8f6ef"/><stop offset="0.52" stop-color="#d8d5ca"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+    <filter id="mineral"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="5"/><feColorMatrix values="0 0 0 0 0.36 0 0 0 0 0.35 0 0 0 0 0.33 0 0 0 .32 0"/></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#base)"/>
+  <rect width="1200" height="800" filter="url(#mineral)" opacity="0.82"/>
+  <path d="M-60 180 C170 100 310 245 515 190 S820 95 1260 165" fill="none" stroke="#aaa79d" stroke-width="6" opacity="0.38"/>
+  <path d="M-80 560 C220 455 390 620 650 520 S940 420 1280 500" fill="none" stroke="#c7c1b4" stroke-width="8" opacity="0.48"/>
+  <circle cx="250" cy="250" r="12" fill="#9a7a6c" opacity="0.5"/>
+  <circle cx="870" cy="340" r="9" fill="#77756f" opacity="0.55"/>
+  <circle cx="680" cy="610" r="13" fill="#8f897d" opacity="0.42"/>
+  <text x="600" y="392" font-family="Arial, sans-serif" font-size="44" letter-spacing="8" text-anchor="middle" fill="#4f4d48">WHITE GRANITE</text>
+  <text x="600" y="450" font-family="Arial, sans-serif" font-size="24" letter-spacing="4" text-anchor="middle" fill="#6c6961">REPLACE THIS FILE</text>
+</svg>
