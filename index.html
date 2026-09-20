@@ -2331,11 +2331,24 @@ window.addEventListener('load', handleRoute);
 
 <script>
 function openEstimator() {
-  document.getElementById('estimatorModal').classList.remove('hidden');
+  const m = document.getElementById('estimatorModal');
+  if (m) {
+    m.style.setProperty('display', 'flex', 'important');
+    m.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
 }
 function closeEstimator() {
-  document.getElementById('estimatorModal').classList.add('hidden');
+  const m = document.getElementById('estimatorModal');
+  if (m) {
+    m.style.setProperty('display', 'none', 'important');
+    m.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
 }
+window.openEstimator = openEstimator;
+window.closeEstimator = closeEstimator;
+
 function calcEstimate() {
   const l = parseFloat(document.getElementById('estLength').value) || 0;
   const w = parseFloat(document.getElementById('estWidth').value) || 0;
