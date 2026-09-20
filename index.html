@@ -611,6 +611,87 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     51%  { transform-origin: bottom; }
     100% { transform: scaleY(0); transform-origin: bottom; }
   }
+
+  /* ==========================================================================
+     COMPREHENSIVE CROSS-DEVICE RESPONSIVE OPTIMIZATIONS
+     ========================================================================== */
+  
+  /* Touch Target & Fluid Typography Base */
+  button, a, input, select, textarea {
+    touch-action: manipulation;
+  }
+  
+  /* Responsive Table Wrapper */
+  .table-responsive, table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Sticky Mobile Call & WhatsApp Bar (< 768px) */
+  .mobile-action-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 1050;
+    background: #11221f;
+    border-top: 1px solid rgba(201, 168, 76, 0.3);
+    padding: 8px 12px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+  }
+  
+  @media (max-width: 767px) {
+    .mobile-action-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .whatsapp-float {
+      bottom: 72px !important; /* Move WhatsApp float button above mobile sticky bar */
+      right: 16px !important;
+      width: 48px !important;
+      height: 48px !important;
+    }
+    body {
+      padding-bottom: 60px; /* Space for mobile sticky action bar */
+    }
+  }
+
+  /* Compact Smartphones & Foldables (< 360px) */
+  @media (max-width: 360px) {
+    h1 { font-size: 1.85rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    .hero-bg p { font-size: 0.88rem !important; }
+    .brand-logo { width: 34px !important; height: 34px !important; }
+    nav .font-display { font-size: 0.85rem !important; }
+    .px-6 { padding-left: 12px !important; padding-right: 12px !important; }
+  }
+
+  /* Tablets & iPads (640px to 1024px) */
+  @media (min-width: 640px) and (max-width: 1024px) {
+    .hero-bg h1 { font-size: 3.2rem !important; }
+    .product-card { height: 100%; display: flex; flex-direction: column; }
+    .product-card > div:last-child { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  }
+
+  /* Ultra-Wide Desktops & 4K Monitors (> 1536px) */
+  @media (min-width: 1536px) {
+    .max-w-7xl { max-width: 1440px !important; }
+    .hero-bg h1 { font-size: 4.5rem !important; }
+    .hero-bg p { font-size: 1.25rem !important; }
+  }
+
+  /* Modal Accessibility & Touch Scrolling */
+  .modal-dialog {
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -5474,6 +5555,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+
+
+<!-- Mobile Sticky Action Bar (< 768px) -->
+<div class="mobile-action-bar">
+  <a href="tel:+919836990759" class="flex-1 py-2.5 px-2 bg-emerald-950 text-amber-400 text-[11px] font-bold uppercase tracking-wider text-center rounded border border-amber-500/40 flex items-center justify-center gap-1 min-h-[44px]">
+    <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    Call Now
+  </a>
+  <a href="#" onclick="openEstimator();return false;" class="flex-1 py-2.5 px-2 bg-amber-500 text-emerald-950 text-[11px] font-bold uppercase tracking-wider text-center rounded flex items-center justify-center gap-1 min-h-[44px]">
+    <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 14H7v-2h10v2zm0-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+    Estimator
+  </a>
+  <a href="https://wa.me/919836990759?text=Hi%20Vishnupriya%20Granite%2C%20I%20am%20inquiring%20about%20granite%20supplies." target="_blank" class="flex-1 py-2.5 px-2 bg-emerald-600 text-white text-[11px] font-bold uppercase tracking-wider text-center rounded flex items-center justify-center gap-1 min-h-[44px]">
+    <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.84 9.84 0 0 0 12.04 2z"/></svg>
+    WhatsApp
+  </a>
+</div>
 
 </body>
 </html>
