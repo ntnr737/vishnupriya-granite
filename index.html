@@ -693,6 +693,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Vishnupriya Granite Blog & Natural Stone Guides",
+  "url": "https://www.vishnupriyagranite.com/#blog",
+  "description": "Expert architectural stone guides on Sadahalli Granite, granite slab price lists in Bangalore, countertop comparisons, and exterior paving stones.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vishnupriya Granite",
+    "logo": "https://www.vishnupriyagranite.com/vishnupriya-granite-logo-white-bg.png"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Sadahalli White Granite: Ultimate Buyer's Guide, Price & Applications in Bangalore",
+      "url": "https://www.vishnupriyagranite.com/#blog/sadahalli-white-granite-buyers-guide",
+      "datePublished": "2026-09-20",
+      "author": {"@type": "Person", "name": "Bikram Rai"},
+      "image": "https://www.vishnupriyagranite.com/product-images/white-granite.png",
+      "description": "Buyer's guide to Sadahalli White Granite from Sadahalli quarries in Bangalore North."
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Granite Slab Price List in Bangalore (2026 Edition): Sadahalli, Black Galaxy & Kashmir White",
+      "url": "https://www.vishnupriyagranite.com/#blog/granite-slab-price-list-bangalore-2026",
+      "datePublished": "2026-09-15",
+      "author": {"@type": "Person", "name": "Bikram Rai"},
+      "image": "https://www.vishnupriyagranite.com/product-images/tan-brown.png",
+      "description": "Bangalore natural stone price guide for Sadahalli White, Black Galaxy, Kashmir White, and Kota stone."
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -714,6 +750,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hidden md:flex items-center gap-8">
     <a href="#home" onclick="showPage('home')" class="nav-link text-gray-300 hover:text-white transition-colors cursor-pointer text-sm tracking-widest uppercase font-light">Home</a>
     <a href="#products" onclick="showPage('products')" class="nav-link text-gray-300 hover:text-white transition-colors cursor-pointer text-sm tracking-widest uppercase font-light">Products</a>
+    <a href="#blog" onclick="showPage('blog')" class="nav-link text-gray-300 hover:text-white transition-colors cursor-pointer text-sm tracking-widest uppercase font-light">Blog</a>
     <a href="#about" onclick="showPage('about')" class="nav-link text-gray-300 hover:text-white transition-colors cursor-pointer text-sm tracking-widest uppercase font-light">About</a>
     <a href="#contact" onclick="showPage('contact')" class="nav-link text-gray-300 hover:text-white transition-colors cursor-pointer text-sm tracking-widest uppercase font-light">Contact</a>
     <button onclick="showPage('contact')" class="btn-gold px-5 py-2 rounded-sm text-xs">Get Quote</button>
@@ -1486,6 +1523,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============================
      PAGE: ABOUT
 ============================= -->
+
+  <!-- ==================== BLOG LISTING PAGE ==================== -->
+  <div id="page-blog" class="page min-h-screen grain" style="padding-top:100px;">
+    <!-- Blog Header -->
+    <div style="background:linear-gradient(135deg,#164B3F 0%,#1F5B4D 100%);" class="py-16 text-white text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <p style="font-size:0.7rem;letter-spacing:0.35em;color:var(--gold);text-transform:uppercase;" class="mb-3 font-medium">Natural Stone Knowledge Hub</p>
+        <h1 class="font-display text-4xl md:text-5xl font-light mb-4">Granite & Natural Stone Guides</h1>
+        <p class="text-gray-300 text-sm max-w-2xl mx-auto font-light">Expert advice on Sadahalli Granite, pricing per sq.ft, maintenance, countertop selection, and architectural stone finishes in Bangalore.</p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <!-- Blog Categories -->
+      <div class="flex flex-wrap gap-3 justify-center mb-12">
+        <button class="blog-cat-btn active px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('all', this)">All Articles</button>
+        <button class="blog-cat-btn px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('buying-guide', this)">Buying Guides</button>
+        <button class="blog-cat-btn px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('pricing', this)">Pricing & Cost</button>
+        <button class="blog-cat-btn px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('comparison', this)">Material Comparisons</button>
+        <button class="blog-cat-btn px-5 py-2 rounded-sm text-xs font-medium border border-gray-300" onclick="filterBlogs('design', this)">Exterior & Design</button>
+      </div>
+
+      <!-- Blog Grid -->
+      <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Dynamic Blog Cards Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== BLOG DETAIL PAGE ==================== -->
+  <div id="page-blog-detail" class="page min-h-screen grain" style="padding-top:100px;">
+    <div class="max-w-4xl mx-auto px-6 py-12">
+      <!-- Back Link -->
+      <button onclick="showPage('blog')" class="inline-flex items-center gap-2 text-xs font-medium text-amber-700 hover:text-amber-800 mb-8 uppercase tracking-widest">
+        &larr; Back to All Articles
+      </button>
+
+      <!-- Post Header -->
+      <div id="bdCategory" class="text-xs uppercase tracking-widest text-amber-600 font-semibold mb-2"></div>
+      <h1 id="bdTitle" class="font-display text-3xl md:text-5xl font-light text-gray-900 leading-tight mb-6"></h1>
+      
+      <div class="flex items-center gap-4 text-xs text-gray-500 pb-8 mb-8 border-b border-gray-200">
+        <span id="bdAuthor" class="font-medium text-gray-800"></span>
+        &middot;
+        <span id="bdDate"></span>
+        &middot;
+        <span id="bdReadTime" class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded"></span>
+      </div>
+
+      <!-- Featured Image -->
+      <div id="bdImageContainer" class="mb-10 rounded-lg overflow-hidden shadow-lg" style="height:380px;position:relative;">
+        <img id="bdImage" src="" alt="" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+
+      <!-- Article Content -->
+      <div id="bdContent" class="prose max-w-none text-gray-700 leading-relaxed space-y-6 font-light">
+      </div>
+
+      <!-- Article CTA Box -->
+      <div class="my-12 p-8 bg-gradient-to-r from-emerald-900 to-teal-900 rounded-lg text-white text-center shadow-xl">
+        <h3 class="font-display text-2xl font-light mb-2">Need Sadahalli Granite for Your Project in Bangalore?</h3>
+        <p class="text-gray-300 text-sm max-w-xl mx-auto mb-6">Calculate your required square footage and get instant factory-direct pricing with PAN-India supply.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <button onclick="openEstimator()" class="bg-amber-500 hover:bg-amber-600 text-black font-semibold text-xs px-6 py-3 rounded-sm uppercase tracking-wider">
+            Calculate Granite Price & Sq.Ft 🧮
+          </button>
+          <a href="https://wa.me/919836990759?text=Hi%20Vishnupriya%20Granite,%20I%20read%20your%20article%20and%20need%20a%20quote" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-6 py-3 rounded-sm uppercase tracking-wider">
+            WhatsApp Sales Team
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <div id="page-about" class="page" style="padding-top:80px;">
   <div style="background:var(--obsidian);padding:80px 24px 60px;" class="text-center relative overflow-hidden">
     <div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 60px,rgba(201,168,76,0.015) 60px,rgba(201,168,76,0.015) 61px);"></div>
@@ -1750,7 +1861,7 @@ function showPage(pageName, updateHash = true) {
   const page = document.getElementById('page-' + pageName);
   if (page) {
     page.classList.add('active');
-    if (updateHash && ['home', 'products', 'about', 'contact'].includes(pageName)) {
+    if (updateHash && ['home', 'products', 'blog', 'blog-detail', 'about', 'contact'].includes(pageName)) {
       setRoute('#' + pageName);
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2135,7 +2246,7 @@ function handleRoute() {
     }
   }
   const pageName = hash.replace('#', '') || 'home';
-  if (['home', 'products', 'about', 'contact'].includes(pageName)) {
+  if (['home', 'products', 'blog', 'blog-detail', 'about', 'contact'].includes(pageName)) {
     showPage(pageName, false);
   } else if (hash === '#site-footer') {
     showPage('home', false);
@@ -2245,6 +2356,255 @@ function sendWhatsAppEstimate() {
   const text = 'Hi Vishnupriya Granite, I am inquiring about ' + stone + ' (' + sqft + ' sq.ft, ' + finish + ') for project in ' + loc + '. Please share factory-direct price per sq.ft.';
   window.open('https://wa.me/919836990759?text=' + encodeURIComponent(text), '_blank');
 }
+
+// ==================== BLOGS DATA & ROUTING ====================
+const blogsData = {
+  'sadahalli-white-granite-buyers-guide': {
+    slug: 'sadahalli-white-granite-buyers-guide',
+    title: 'Sadahalli White Granite: Ultimate Buyer's Guide, Price & Applications in Bangalore',
+    category: 'buying-guide',
+    categoryName: 'Buying Guide & Local Granite',
+    author: 'Bikram Rai, Vishnupriya Granite',
+    date: 'September 20, 2026',
+    readTime: '7 min read',
+    img: 'product-images/white-granite.png',
+    excerpt: 'Everything you need to know about Sadahalli White Granite sourced directly from Sadahalli quarries in Bangalore North: mineral properties, slab pricing (INR 65-140/sq.ft), finishes, and countertop longevity.',
+    content: `
+      <p class="text-lg font-normal text-gray-800">Sadahalli White Granite is widely recognized across Karnataka and South India as one of the most durable, aesthetically versatile, and cost-effective natural stones available. Quarried in the mineral-rich belt of <strong>Sadahalli Post, Bangalore North</strong>, this signature granite has become the top choice for residential homeowners, commercial developers, architects, and interior designers.</p>
+      
+      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">1. Geological Composition & Physical Characteristics</h3>
+      <p>Sadahalli White Granite features a bright, clean white feldspar matrix sprinkled with subtle grey quartz veins and fine black biotite specks. Unlike imported engineered quartz, Sadahalli Granite is 100% natural igneous rock formed under intense heat and pressure over millions of years.</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <td><strong>Mohs Hardness:</strong> 6.5 to 7 (Highly scratch-resistant against steel knives and heavy cookware).</td>
+        <td><strong>Water Absorption Rate:</strong> Less than 0.18% (Extremely low porosity prevents water staining and mold growth).</td>
+        <td><strong>Density:</strong> ~2.65 g/cm³ (Outstanding structural load tolerance for high-footfall flooring).</td>
+      </ul>
+
+      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">2. Available Slab Sizes & Surface Finishes</h3>
+      <p>At Vishnupriya Granite's Sadahalli processing yard, we cut and finish Sadahalli White Granite into a variety of formats tailored to your architectural brief:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <td><strong>Gangsaw Slabs:</strong> Large format slabs (10ft &times; 6ft, 9ft &times; 5.5ft) in 18mm, 20mm, and 30mm thickness. Ideal for seamless kitchen island countertops and continuous hall flooring.</td>
+        <td><strong>Cutter Slabs & Tiles:</strong> Pre-cut 8ft &times; 3ft slabs and 2ft &times; 2ft floor tiles for quick installation.</td>
+        <td><strong>Polished Finish:</strong> High-gloss mirror polish enhancing the natural white brilliance for indoor kitchens, vanities, and lobbies.</td>
+        <td><strong>Honed Finish:</strong> Satin matte texture offering a contemporary tactile surface for calm bathrooms and wall cladding.</td>
+        <td><strong>Flamed / Thermal Finish:</strong> Rough, anti-skid texture specifically engineered for outdoor driveways, courtyards, swimming pool decks, and stair steps.</td>
+      </ul>
+
+      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">3. Sadahalli White Granite Price List in Bangalore</h3>
+      <p>Because Vishnupriya Granite operates directly out of Sadahalli, Bangalore North, we eliminate middleman dealer markups. Current factory-direct pricing for Sadahalli White Granite in Bangalore ranges from <strong>&#8377;65 to &#8377;140 per sq.ft</strong> depending on slab thickness, polish grade, and lot size uniformity.</p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-600 p-4 my-6">
+        <p class="font-semibold text-amber-900">Pro Tip for Homebuilders:</p>
+        <p class="text-sm text-amber-800">Always inspect full Gangsaw slabs under natural sunlight at our Sadahalli yard to verify grain consistency across your required lot size before cutting.</p>
+      </div>
+    `
+  },
+  'granite-vs-marble-countertops-bangalore': {
+    slug: 'granite-vs-marble-countertops-bangalore',
+    title: 'Granite vs Marble Countertops: Which is Best for Bangalore Kitchens & Climate?',
+    category: 'comparison',
+    categoryName: 'Material Comparison',
+    author: 'Stone Experts Team, Vishnupriya Granite',
+    date: 'September 18, 2026',
+    readTime: '6 min read',
+    img: 'product-images/black-galaxy.png',
+    excerpt: 'Comparing natural Granite vs Marble for South Indian kitchen countertops: heat tolerance, turmeric stain resistance, maintenance, and long-term cost analysis per square foot.',
+    content: `
+      <p class="text-lg font-normal text-gray-800">Choosing the right stone surface for your kitchen countertop or flooring is one of the most critical decisions in residential interior design. In Bangalore homes, countertops must withstand heavy everyday cooking, hot kadais, spicy masalas, and citrus acids.</p>
+
+      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">Granite vs. Marble: Key Performance Matrix</h3>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm text-left border-collapse border border-gray-200">
+          <thead class="bg-emerald-950 text-white">
+            <tr>
+              <th class="p-3 border border-gray-300">Feature</th>
+              <th class="p-3 border border-gray-300">Natural Granite (Sadahalli / Black Galaxy)</th>
+              <th class="p-3 border border-gray-300">Natural Marble (Makrana / Italian)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="p-3 font-semibold bg-gray-50 border">Hardness & Scratch Resistance</td>
+              <td class="p-3 border text-emerald-800 font-medium">Very High (Mohs 6.5–7) — Knife resistant</td>
+              <td class="p-3 border text-amber-800">Medium (Mohs 3–4) — Prone to scratches</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-semibold bg-gray-50 border">Stain & Chemical Resistance</td>
+              <td class="p-3 border text-emerald-800 font-medium">Resists turmeric, lemon juice, oil & vinegar</td>
+              <td class="p-3 border text-amber-800">Metamorphic calcium carbonate etches with acids</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-semibold bg-gray-50 border">Heat Resistance</td>
+              <td class="p-3 border text-emerald-800 font-medium">Withstands direct hot cookpans (> 250&deg;C)</td>
+              <td class="p-3 border text-amber-800">Can scorch or crack under rapid heat change</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-semibold bg-gray-50 border">Average Price Range</td>
+              <td class="p-3 border">&#8377;65 – &#8377;260 / sq.ft</td>
+              <td class="p-3 border">&#8377;120 – &#8377;550 / sq.ft</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">The Verdict for Bangalore Kitchens</h3>
+      <p>For active Indian kitchens where turmeric, tamarind, ghee, and heavy steel cookware are daily staples, <strong>Granite (such as Sadahalli White or Black Galaxy)</strong> is by far the superior choice. Marble remains ideal for prayer rooms (Pooja rooms), formal living room flooring, and accent wall cladding where acidic spills do not occur.</p>
+    `
+  },
+  'granite-slab-price-list-bangalore-2026': {
+    slug: 'granite-slab-price-list-bangalore-2026',
+    title: 'Granite Slab Price List in Bangalore (2026 Edition): Sadahalli, Black Galaxy & Kashmir White',
+    category: 'pricing',
+    categoryName: 'Pricing & Cost Guide',
+    author: 'Bikram Rai, Vishnupriya Granite',
+    date: 'September 15, 2026',
+    readTime: '8 min read',
+    img: 'product-images/tan-brown.png',
+    excerpt: 'Comprehensive factory-direct granite price guide for Bangalore in 2026. Includes cost per sq.ft for Sadahalli White, Black Galaxy, Kashmir White, Tan Brown, Absolute Black & Kota stone.',
+    content: `
+      <p class="text-lg font-normal text-gray-800">Planning a home construction or renovation budget in Bangalore requires reliable, transparent pricing on natural stone materials. Below is the official 2026 factory-direct granite price guide provided by Vishnupriya Granite (Sadahalli Post, Bangalore North).</p>
+
+      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">Bangalore Natural Stone Price Benchmark (2026)</h3>
+      <ul class="space-y-3 my-6">
+        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
+          <div>
+            <strong class="text-gray-900 block">Sadahalli White Granite</strong>
+            <span class="text-xs text-gray-500">Local Bangalore North Quarry &middot; Gangsaw / Cutter Slabs</span>
+          </div>
+          <span class="text-emerald-700 font-bold text-lg">&#8377;65 &ndash; &#8377;140 / sq.ft</span>
+        </li>
+        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
+          <div>
+            <strong class="text-gray-900 block">Black Galaxy Granite</strong>
+            <span class="text-xs text-gray-500">Andhra Pradesh Quarry &middot; Gold Flake Mirror Polish</span>
+          </div>
+          <span class="text-emerald-700 font-bold text-lg">&#8377;140 &ndash; &#8377;260 / sq.ft</span>
+        </li>
+        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
+          <div>
+            <strong class="text-gray-900 block">Kashmir White Granite</strong>
+            <span class="text-xs text-gray-500">Rajasthan Quarry &middot; Garnet Inclusions</span>
+          </div>
+          <span class="text-emerald-700 font-bold text-lg">&#8377;110 &ndash; &#8377;190 / sq.ft</span>
+        </li>
+        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
+          <div>
+            <strong class="text-gray-900 block">Tan Brown Granite</strong>
+            <span class="text-xs text-gray-500">Andhra Pradesh Quarry &middot; Rich Chocolate Feldspar</span>
+          </div>
+          <span class="text-emerald-700 font-bold text-lg">&#8377;95 &ndash; &#8377;165 / sq.ft</span>
+        </li>
+        <li class="p-4 bg-gray-50 border border-gray-200 rounded flex justify-between items-center">
+          <div>
+            <strong class="text-gray-900 block">Kota Stone Slabs & Tiles</strong>
+            <span class="text-xs text-gray-500">Rajasthan Quarry &middot; Blue / Green Natural Limestone</span>
+          </div>
+          <span class="text-emerald-700 font-bold text-lg">&#8377;35 &ndash; &#8377;75 / sq.ft</span>
+        </li>
+      </ul>
+
+      <p class="text-sm text-gray-600 mt-4">Note: Prices vary based on slab thickness (18mm vs 20mm), polish grade, and lot size uniformity. For exact project estimates, use our <a href="#" onclick="openEstimator();return false;" class="text-amber-700 underline font-medium">Instant Granite Calculator</a>.</p>
+    `
+  },
+  'exterior-paving-stones-bangalore-sadahalli-kota': {
+    slug: 'exterior-paving-stones-bangalore-sadahalli-kota',
+    title: 'Top 5 Exterior Paving Stones for Bangalore Homes: Sadahalli Granite, Kota Stone & Slate',
+    category: 'design',
+    categoryName: 'Exterior & Design',
+    author: 'Architectural Stone Consultant, Vishnupriya Granite',
+    date: 'September 10, 2026',
+    readTime: '5 min read',
+    img: 'product-images/kota-stone.png',
+    excerpt: 'Guide to choosing weather-resistant, anti-skid natural stone paving for Bangalore driveways, villa courtyards, porticos, and garden pathways.',
+    content: `
+      <p class="text-lg font-normal text-gray-800">Bangalore's rainy monsoon seasons and sunny climate require durable, high-friction outdoor paving materials that resist slipping, water pooling, and vehicle tire wear.</p>
+
+      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">1. Flamed Sadahalli White Granite</h3>
+      <p>Thermal flamed Sadahalli Granite is the ultimate choice for luxury villa driveways and porticos. The high-temperature torching process burst open surface quartz crystals, creating an elegant rough texture that offers 100% anti-slip safety even when soaked in monsoon rains.</p>
+
+      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">2. Natural Kota Stone</h3>
+      <p>Kota stone limestone provides a cool, earthy green-blue aesthetic for garden walkways, verandahs, and courtyards. It remains naturally cool under foot during hot summer months.</p>
+
+      <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">3. Indian Multi-Slate</h3>
+      <p>Rich rustic slate tiles with natural cleft textures bring warm copper, charcoal, and gold hues to outdoor feature walls, boundary pillars, and swimming pool surroundings.</p>
+    `
+  }
+};
+
+function renderBlogGrid(catFilter = 'all') {
+  const grid = document.getElementById('blogGrid');
+  if (!grid) return;
+  grid.innerHTML = '';
+  
+  Object.values(blogsData).forEach(b => {
+    if (catFilter !== 'all' && b.category !== catFilter) return;
+    
+    const card = document.createElement('div');
+    card.className = 'bg-white rounded-sm shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer flex flex-col';
+    card.onclick = () => openBlog(b.slug);
+    
+    card.innerHTML = `
+      <div style="height:200px;overflow:hidden;position:relative;">
+        <img src="${b.img}" alt="${b.title}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
+        <span class="absolute top-3 left-3 bg-emerald-900 bg-opacity-90 text-amber-400 text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-sm">
+          ${b.categoryName}
+        </span>
+      </div>
+      <div class="p-6 flex-1 flex flex-col justify-between">
+        <div>
+          <div class="text-[11px] text-gray-400 mb-2">${b.date} &middot; ${b.readTime}</div>
+          <h3 class="font-display text-xl font-semibold text-gray-900 mb-2 leading-snug hover:text-amber-700 transition-colors">${b.title}</h3>
+          <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-4">${b.excerpt}</p>
+        </div>
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-amber-700">
+          <span>Read Full Article &rarr;</span>
+          <span class="text-gray-400 font-normal">${b.author.split(',')[0]}</span>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function filterBlogs(cat, btn) {
+  document.querySelectorAll('.blog-cat-btn').forEach(b => b.classList.remove('active', 'bg-emerald-950', 'text-white'));
+  if (btn) btn.classList.add('active', 'bg-emerald-950', 'text-white');
+  renderBlogGrid(cat);
+}
+
+function openBlog(slug, updateHash = true) {
+  const b = blogsData[slug];
+  if (!b) return;
+  
+  if (updateHash) setRoute('#blog/' + slug);
+  
+  document.getElementById('bdCategory').textContent = b.categoryName;
+  document.getElementById('bdTitle').textContent = b.title;
+  document.getElementById('bdAuthor').textContent = 'By ' + b.author;
+  document.getElementById('bdDate').textContent = b.date;
+  document.getElementById('bdReadTime').textContent = b.readTime;
+  
+  const imgEl = document.getElementById('bdImage');
+  if (imgEl) { imgEl.src = b.img; imgEl.alt = b.title; }
+  
+  document.getElementById('bdContent').innerHTML = b.content;
+  
+  // Track GA4 event
+  if (typeof gtag === 'function') {
+    gtag('event', 'select_content', {
+      content_type: 'blog_post',
+      item_id: slug
+    });
+  }
+  
+  showPage('blog-detail', false);
+}
+
+// Initialise blog grid on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+  renderBlogGrid();
+});
+
 </script>
 
 </body>
