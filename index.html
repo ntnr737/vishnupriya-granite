@@ -931,6 +931,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <!-- AUDIENCE BIFURCATION GATEWAYS -->
+  <section class="max-w-7xl mx-auto px-6 -mt-16 relative z-20 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- B2C Homeowner -->
+      <div class="bg-emerald-950/95 backdrop-blur-md border border-amber-500/30 p-6 rounded-sm text-white hover:border-amber-400 transition-all shadow-xl">
+        <div class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2">B2C Homeowners</div>
+        <h3 class="font-display text-xl mb-2 font-medium">Kitchen & Floor Calculator</h3>
+        <p class="text-gray-300 text-xs mb-5 leading-relaxed">Calculate total sq.ft, cutting wastage allowances, and get instant factory-direct price estimates.</p>
+        <button onclick="showPage('contact');setTimeout(function(){document.getElementById('calculator-widget').scrollIntoView({behavior:'smooth'});},300);" class="text-xs text-amber-400 font-bold uppercase tracking-wider hover:underline inline-flex items-center gap-1">
+          Calculate Quote &rarr;
+        </button>
+      </div>
+      <!-- B2B Architect -->
+      <div class="bg-emerald-950/95 backdrop-blur-md border border-amber-500/30 p-6 rounded-sm text-white hover:border-amber-400 transition-all shadow-xl">
+        <div class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2">Architects & Specifiers</div>
+        <h3 class="font-display text-xl mb-2 font-medium">Architect Sample Portal</h3>
+        <p class="text-gray-300 text-xs mb-5 leading-relaxed">Order 4-piece physical swatch boxes, download ASTM test sheets, COF ratings & CAD hatches.</p>
+        <button onclick="openSampleKitModal()" class="text-xs text-amber-400 font-bold uppercase tracking-wider hover:underline inline-flex items-center gap-1">
+          Request Swatch Kit &rarr;
+        </button>
+      </div>
+      <!-- B2B Exporter -->
+      <div class="bg-emerald-950/95 backdrop-blur-md border border-amber-500/30 p-6 rounded-sm text-white hover:border-amber-400 transition-all shadow-xl">
+        <div class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2">Bulk Builders & Exporters</div>
+        <h3 class="font-display text-xl mb-2 font-medium">Container & Crating Matrix</h3>
+        <p class="text-gray-300 text-xs mb-5 leading-relaxed">Inspect 20ft container payload limits, ISPM-15 seaworthy crating, and gangsaw capacity.</p>
+        <button onclick="openExportMatrixModal()" class="text-xs text-amber-400 font-bold uppercase tracking-wider hover:underline inline-flex items-center gap-1">
+          View Export Specs &rarr;
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- Stats -->
   <section style="background:var(--obsidian);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);">
     <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -2443,6 +2476,397 @@ function sendWhatsAppEstimate() {
 
 // ==================== BLOGS DATA & ROUTING ====================
 const blogsData = {
+
+  "granite-vs-quartz-countertops-durability-heat-guide": {
+    "slug": "granite-vs-quartz-countertops-durability-heat-guide",
+    "title": "Granite vs. Quartz Countertops: The Durability & Heat Guide",
+    "category": "material-comparison",
+    "categoryName": "Material Comparison",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "July 12, 2026",
+    "readTime": "9 min read",
+    "img": "product-images/white-granite.png",
+    "excerpt": "Head-to-head analysis of natural Granite vs engineered Quartz: 700 Fahrenheit heat threshold vs 300 Fahrenheit resin scorch, Mohs hardness, turmeric stain immunity, and mitered edge fabrication costs.",
+    "content": `
+    <p class="text-lg font-normal text-gray-800 leading-relaxed mb-6">
+      When selecting modular kitchen countertops for South Indian homes and commercial culinary spaces, the debate between natural <strong>Granite</strong> and engineered <strong>Quartz</strong> centers on two critical performance metrics: thermal tolerance and long-term chemical stain resistance. In this comprehensive technical breakdown published by the stone specialists at <strong>Vishnupriya Granite (Sadahalli Post, Bangalore North)</strong>, we examine mineral hardness, scorching behavior under direct hot cookware, turmeric (haldi) absorption, and lifetime fabrication cost per square foot.
+    </p>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">1. Head-to-Head Technical Comparison Matrix</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Engineered quartz consists of approximately 90% crushed quartz mineral bound together by 10% polyester resin binder and color pigments. Natural granite is 100% solid igneous rock forged under extreme planetary heat. Below is the empirical comparison:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="w-full text-sm text-left border-collapse border border-gray-200">
+        <thead class="bg-emerald-950 text-white">
+          <tr>
+            <th class="p-3 border border-gray-300">Property Parameter</th>
+            <th class="p-3 border border-gray-300">Natural Granite (Sadahalli / Galaxy)</th>
+            <th class="p-3 border border-gray-300">Engineered Quartz</th>
+            <th class="p-3 border border-gray-300">Practical Kitchen Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b bg-gray-50">
+            <td class="p-3 font-semibold border">Heat Scorching Threshold</td>
+            <td class="p-3 border text-emerald-800 font-bold">Withstands up to 700&deg;F (370&deg;C)</td>
+            <td class="p-3 border text-red-700 font-semibold">Burns / Yellows above 300&deg;F (150&deg;C)</td>
+            <td class="p-3 border text-xs">Direct hot kadai placement causes resin rings on quartz.</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3 font-semibold border">Mohs Surface Hardness</td>
+            <td class="p-3 border text-emerald-800 font-bold">6.5 &ndash; 7.0 (Steel Knife Proof)</td>
+            <td class="p-3 border">6.0 &ndash; 6.5</td>
+            <td class="p-3 border text-xs">Granite resists direct knife chopping without scratching.</td>
+          </tr>
+          <tr class="border-b bg-gray-50">
+            <td class="p-3 font-semibold border">UV Sunlight Stability</td>
+            <td class="p-3 border text-emerald-800 font-bold">100% UV Stable (No Fade)</td>
+            <td class="p-3 border text-red-700">Resins Discolor in Direct Sun</td>
+            <td class="p-3 border text-xs">Granite is mandatory for outdoor kitchens & sunlit windows.</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3 font-semibold border">Porosity & Stain Immunity</td>
+            <td class="p-3 border">0.15% &ndash; 0.22% (When Sealed)</td>
+            <td class="p-3 border text-emerald-800 font-bold">&lt; 0.05% (Non-porous)</td>
+            <td class="p-3 border text-xs">Quartz requires no sealing; granite needs 18-mo seal.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">2. Heavy Cooking Environments: Thermal Shock & Turmeric Behavior</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      South Indian cooking involves hot oil frying, stainless steel pressure cookers, and heavy cast-iron kadais. Placing a hot kadai directly onto an engineered quartz surface melts the polyester resin binder, leaving an irreversible brown burn ring. Natural granite, processed at our Sadahalli yard, absorbs thermal shock effortlessly without discoloration.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Regarding chemical staining, organic spices like turmeric (curcumin) and mustard oil can penetrate unsealed pale stones. Applying a fluoropolymer impregnating sealer to Sadahalli White or Kashmir White granite creates a permanent oleophobic barrier that repels oils and liquids completely.
+    </p>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">3. Fabrication & Edge Profiling Costs</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Granite gangsaw slabs (18mm and 20mm) allow custom edge profiles such as full bullnose, half bullnose, bevel, and mitered waterfall edges using standard diamond tooling. Quartz fabrication requires specialized waterjet cutting and synthetic resin adhesives, increasing total jobsite labor costs by 25% to 35%.
+    </p>
+
+    <div class="bg-amber-50 border-l-4 border-amber-600 p-5 my-6 rounded-r">
+      <h4 class="font-bold text-amber-950 text-base mb-1">Architect Specification Advice:</h4>
+      <p class="text-sm text-amber-900 leading-relaxed">
+        For high-traffic kitchen islands and heavy-use cooking counters, natural granite remains the most durable and cost-effective material over a 30-year lifecycle.
+      </p>
+    </div>
+
+    <div class="p-6 bg-emerald-950 text-white rounded-sm my-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>
+        <h4 class="font-display text-xl font-semibold text-amber-400 mb-1">Request a 4-Piece Kitchen Swatch Kit</h4>
+        <p class="text-sm text-gray-300">Order physical samples of Sadahalli White, Black Galaxy, Kashmir White, and Tan Brown dispatched in 48 hours.</p>
+      </div>
+      <button onclick="openSampleKitModal()" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-sm uppercase tracking-wider rounded-sm transition-colors shrink-0">
+        Order Swatch Box
+      </button>
+    </div>
+    `
+  },
+
+  "granite-slab-price-per-sq-ft-cost-breakdown": {
+    "slug": "granite-slab-price-per-sq-ft-cost-breakdown",
+    "title": "Granite Slab Price Per Sq. Ft.: Complete Cost Breakdown (2026 Edition)",
+    "category": "pricing-guide",
+    "categoryName": "Pricing & Cost Guide",
+    "author": "Bikram Rai, Vishnupriya Granite",
+    "date": "August 18, 2026",
+    "readTime": "10 min read",
+    "img": "product-images/tan-brown.png",
+    "excerpt": "Complete 2026 price list for Sadahalli White, Black Galaxy, Kashmir White, Tan Brown, Absolute Black & Kota Stone in Bangalore. Includes 5 cost drivers and 15-20% cutting wastage rules.",
+    "content": `
+    <p class="text-lg font-normal text-gray-800 leading-relaxed mb-6">
+      Understanding granite pricing per square foot in Bangalore requires analyzing quarry sourcing origin, slab size formats, calibration thickness (18mm vs 20mm), surface processing, and line-free mineral purity. Published by the factory team at <strong>Vishnupriya Granite (Sadahalli Post, Bangalore North)</strong>, this guide provides a transparent 2026 price list and cost driver breakdown.
+    </p>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">1. Benchmark Price Tiers in Bangalore (2026)</h3>
+    <div class="overflow-x-auto my-6">
+      <table class="w-full text-sm text-left border-collapse border border-gray-200">
+        <thead class="bg-emerald-950 text-white">
+          <tr>
+            <th class="p-3 border border-gray-300">Granite Variety</th>
+            <th class="p-3 border border-gray-300">Format & Sizing</th>
+            <th class="p-3 border border-gray-300">Thickness</th>
+            <th class="p-3 border border-gray-300">Factory Direct Rate (INR / sq.ft)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b bg-gray-50">
+            <td class="p-3 font-semibold border text-emerald-900">Sadahalli White Granite</td>
+            <td class="p-3 border">Gangsaw Slabs (10ft x 6ft)</td>
+            <td class="p-3 border">18mm / 20mm</td>
+            <td class="p-3 border text-emerald-800 font-bold">&#8377;65 &ndash; &#8377;135 / sq.ft</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3 font-semibold border text-emerald-900">Black Galaxy Granite</td>
+            <td class="p-3 border">Jumbo Gangsaw Slabs</td>
+            <td class="p-3 border">18mm / 20mm</td>
+            <td class="p-3 border text-emerald-800 font-bold">&#8377;180 &ndash; &#8377;340 / sq.ft</td>
+          </tr>
+          <tr class="border-b bg-gray-50">
+            <td class="p-3 font-semibold border text-emerald-900">Kashmir White Granite</td>
+            <td class="p-3 border">Gangsaw Slabs</td>
+            <td class="p-3 border">18mm</td>
+            <td class="p-3 border text-emerald-800 font-bold">&#8377;120 &ndash; &#8377;210 / sq.ft</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3 font-semibold border text-emerald-900">Tan Brown Granite</td>
+            <td class="p-3 border">Cutter Slabs (8ft x 3ft)</td>
+            <td class="p-3 border">18mm</td>
+            <td class="p-3 border text-emerald-800 font-bold">&#8377;85 &ndash; &#8377;145 / sq.ft</td>
+          </tr>
+          <tr class="border-b bg-gray-50">
+            <td class="p-3 font-semibold border text-emerald-900">Kota Stone Limestone</td>
+            <td class="p-3 border">Pre-Cut Flooring Tiles (2x2 ft)</td>
+            <td class="p-3 border">16mm / 18mm</td>
+            <td class="p-3 border text-emerald-800 font-bold">&#8377;45 &ndash; &#8377;85 / sq.ft</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">2. The 5 Core Cost Drivers</h3>
+    <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+      <li><strong>Gangsaw vs Vertical Cutter Format:</strong> Gangsaw slabs (10ft x 6ft) provide seamless joint-free kitchen counters and command a 20% premium over smaller vertical cutter slabs (8ft x 3ft).</li>
+      <li><strong>Calibration Thickness (18mm vs 20mm):</strong> Full 20mm slabs offer superior structural rigidity for heavy cantilevered islands compared to economy 15mm slabs.</li>
+      <li><strong>Mineral Line Purity:</strong> Slabs with uniform crystal distribution and zero black patch defects command top-tier pricing.</li>
+      <li><strong>Surface Finish Processing:</strong> High-gloss mirror polishing is standard; specialized thermal flaming or leather brushing adds INR 15 - 25 per sq.ft.</li>
+      <li><strong>Transport & Jobsite Distance:</strong> Factory-direct dispatch from Sadahalli Post eliminates retail showroom markups (saving 30% to 40%).</li>
+    </ul>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">3. Factoring Cutting Wastage (15% - 20%)</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      When estimating total stone quantity for L-shaped kitchen counters, sink cutouts, and staircase treads, always calculate a 15% to 20% wastage allowance. Ordering all slabs from a single block lot ensures exact color and grain matching.
+    </p>
+
+    <div class="p-6 bg-emerald-950 text-white rounded-sm my-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>
+        <h4 class="font-display text-xl font-semibold text-amber-400 mb-1">Get an Instant Factory Price Quote</h4>
+        <p class="text-sm text-gray-300">Upload your CAD layout or room dimensions to our WhatsApp desk for exact square footage calculation.</p>
+      </div>
+      <a href="https://wa.me/919741800995?text=Hi%20Vishnupriya%20Granite%2C%20I%20have%20my%20kitchen%20/%20flooring%20dimensions.%20Please%20provide%20a%20factory-direct%20sq.ft%20quote." target="_blank" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-sm uppercase tracking-wider rounded-sm transition-colors shrink-0">
+        WhatsApp CAD Dimensions
+      </a>
+    </div>
+    `
+  },
+
+  "high-traction-granite-finishes-outdoor-paving-steps": {
+    "slug": "high-traction-granite-finishes-outdoor-paving-steps",
+    "title": "High-Traction Granite Finishes for Outdoor Paving & Steps",
+    "category": "technical-spec",
+    "categoryName": "Technical & Architecture",
+    "author": "Architectural Stone Specialist, Vishnupriya Granite",
+    "date": "September 4, 2026",
+    "readTime": "8 min read",
+    "img": "product-images/kota-stone.png",
+    "excerpt": "COF slip resistance benchmarks for wet walkways, driveways, and plazas. Comparing Flamed, Leathered, and Bush-Hammered granite textures with axle load thickness specs.",
+    "content": `
+    <p class="text-lg font-normal text-gray-800 leading-relaxed mb-6">
+      Specifying exterior natural stone paving for Bangalore villa courtyards, commercial plazas, and portico driveways requires prioritizing wet slip resistance and vehicular axle load capacity. Published by <strong>Vishnupriya Granite (Sadahalli Post, Bangalore North)</strong>, this technical specification guide breaks down Coefficient of Friction (COF) ratings, surface finishes, and thickness requirements under ASTM C1028 standards.
+    </p>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">1. Wet Slip Hazard & Coefficient of Friction (COF) Ratings</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Polished granite surfaces feature a wet COF of less than 0.40, creating a severe slip hazard during Bangalore monsoons. For public ramps, walkways, and exterior steps, municipal building codes mandate a minimum wet COF rating of 0.60.
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="w-full text-sm text-left border-collapse border border-gray-200">
+        <thead class="bg-emerald-950 text-white">
+          <tr>
+            <th class="p-3 border border-gray-300">Surface Finish</th>
+            <th class="p-3 border border-gray-300">Processing Method</th>
+            <th class="p-3 border border-gray-300">ASTM C1028 Wet COF</th>
+            <th class="p-3 border border-gray-300">Recommended Application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b bg-gray-50">
+            <td class="p-3 font-semibold border text-emerald-900">Thermal Flamed</td>
+            <td class="p-3 border">High-temperature oxy-acetylene torching</td>
+            <td class="p-3 border text-emerald-800 font-bold">&gt; 0.75 (High Traction)</td>
+            <td class="p-3 border text-xs">Driveways, pool decks, public walkways.</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3 font-semibold border text-emerald-900">Bush-Hammered</td>
+            <td class="p-3 border">Pneumatic multi-point impact head</td>
+            <td class="p-3 border text-emerald-800 font-bold">&gt; 0.85 (Maximum Grip)</td>
+            <td class="p-3 border text-xs">Heavy vehicular ramps, steep stair treads.</td>
+          </tr>
+          <tr class="border-b bg-gray-50">
+            <td class="p-3 font-semibold border text-emerald-900">Leathered / River-Washed</td>
+            <td class="p-3 border">Diamond-impregnated brush abrasion</td>
+            <td class="p-3 border text-emerald-800 font-bold">&gt; 0.65 (Tactile Matte)</td>
+            <td class="p-3 border text-xs">Covered verandas, villa courtyards.</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3 font-semibold border text-emerald-900">Honed Finish</td>
+            <td class="p-3 border">Smooth matte grinding (no gloss)</td>
+            <td class="p-3 border">&gt; 0.55 (Moderate Grip)</td>
+            <td class="p-3 border text-xs">Interior lobby floors, bathroom pavers.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">2. Thickness vs. Axle Load Specification Matrix</h3>
+    <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+      <li><strong>20mm Calibrated Pavers:</strong> Suitable for pedestrian foot traffic, residential balconies, and covered porticos set on concrete screed.</li>
+      <li><strong>30mm Heavy Slabs:</strong> Required for passenger car driveways, SUV parking slots, and light commercial courtyards.</li>
+      <li><strong>50mm - 80mm Cobblestones & Setts:</strong> Essential for heavy delivery truck access, fire lanes, and public street paving set on compacted gravel.</li>
+    </ul>
+
+    <div class="p-6 bg-emerald-950 text-white rounded-sm my-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>
+        <h4 class="font-display text-xl font-semibold text-amber-400 mb-1">Download Architect Specification & CAD Files</h4>
+        <p class="text-sm text-gray-300">Get physical sample boxes, COF test certificates, and CAD hatching patterns for your project.</p>
+      </div>
+      <button onclick="openSampleKitModal()" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-sm uppercase tracking-wider rounded-sm transition-colors shrink-0">
+        Request Spec Sheet & Kit
+      </button>
+    </div>
+    `
+  },
+
+  "how-to-seal-granite-countertops-oil-stain-removal": {
+    "slug": "how-to-seal-granite-countertops-oil-stain-removal",
+    "title": "How to Seal Granite Countertops & Eradicate Oil Stains",
+    "category": "care-maintenance",
+    "categoryName": "Care & Maintenance",
+    "author": "Stone Care Specialist, Vishnupriya Granite",
+    "date": "September 15, 2026",
+    "readTime": "7 min read",
+    "img": "product-images/black-galaxy.png",
+    "excerpt": "The 15-minute water drop diagnostic test, penetrating fluoropolymer sealers vs topical coats, and step-by-step poultice recipe for deep grease and turmeric stain extraction.",
+    "content": `
+    <p class="text-lg font-normal text-gray-800 leading-relaxed mb-6">
+      Proper sealing and routine maintenance preserve the high-gloss luster and hygienic integrity of natural granite countertops. Published by <strong>Vishnupriya Granite (Sadahalli Post, Bangalore North)</strong>, this guide outlines the 15-minute diagnostic test, sealer application protocols, and step-by-step poultice stain removal techniques.
+    </p>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">1. The 15-Minute Water Drop Diagnostic Test</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      To determine if your granite countertop requires re-sealing, perform this simple diagnostic test:
+    </p>
+    <ol class="list-decimal pl-6 space-y-3 text-gray-700 mb-6">
+      <li>Pour a tablespoon of clean water onto the granite surface.</li>
+      <li>Wait for 15 minutes and observe the water droplet behavior.</li>
+      <li>If the water beads up tight, your sealer protection is active. If the stone darkens underneath, the sealer has worn off and moisture is absorbing into the crystalline pores.</li>
+    </ol>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">2. Penetrating vs. Topical Sealers</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Always select a <strong>fluoropolymer penetrating (impregnating) sealer</strong> rather than a cheap topical acrylic coating. Penetrating sealers sink deep into micro-capillaries, bonding below the surface to repel water and oil while allowing the stone to breathe naturally. Re-apply every 18 to 24 months for kitchen counters.
+    </p>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">3. Step-by-Step Poultice Recipe for Oil & Turmeric Stains</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      If cooking oil or turmeric penetrates an unsealed granite spot, extract it using a chemical poultice:
+    </p>
+
+    <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-sm my-6">
+      <h4 class="font-bold text-emerald-950 text-base mb-2">Poultice Recipe & Application:</h4>
+      <ul class="text-sm text-emerald-900 space-y-2 list-disc pl-5">
+        <li><strong>Ingredients:</strong> Mix 3 tablespoons of baking soda with 3% hydrogen peroxide (for organic turmeric stains) or acetone (for deep cooking oil grease) into a thick peanut-butter paste.</li>
+        <li><strong>Application:</strong> Spread the paste 1/4 inch thick over the stain, extending 1/2 inch beyond the edges.</li>
+        <li><strong>Coverage:</strong> Cover with plastic wrap and tape the edges down. Poke 4 small pinholes to allow slow evaporation.</li>
+        <li><strong>Drying:</strong> Leave undisturbed for 24 hours until completely dry. As the paste dries, it draws the sub-surface oil out of the stone pores into the powder. Wipe clean with warm water.</li>
+      </ul>
+    </div>
+
+    <div class="p-6 bg-emerald-950 text-white rounded-sm my-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>
+        <h4 class="font-display text-xl font-semibold text-amber-400 mb-1">Have a Mystery Stain on Your Countertop?</h4>
+        <p class="text-sm text-gray-300">Send a clear photo of the stain to our Stone Doctor WhatsApp Desk for instant identification and remediation advice.</p>
+      </div>
+      <a href="https://wa.me/919741800995?text=Hi%20Vishnupriya%20Granite%2C%20I%20have%20a%20stain%20on%20my%20granite%20countertop.%20Here%20is%20a%20photo%20for%20remediation%20advice." target="_blank" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-sm uppercase tracking-wider rounded-sm transition-colors shrink-0">
+        WhatsApp Stone Doctor
+      </a>
+    </div>
+    `
+  },
+
+  "sourcing-granite-slabs-direct-indian-manufacturers": {
+    "slug": "sourcing-granite-slabs-direct-indian-manufacturers",
+    "title": "Sourcing Granite Slabs Direct from Indian Manufacturers: Global B2B Export Guide",
+    "category": "b2b-export",
+    "categoryName": "B2B & Global Export",
+    "author": "Export Logistics Team, Vishnupriya Granite",
+    "date": "September 28, 2026",
+    "readTime": "11 min read",
+    "img": "product-images/kashmir-white.png",
+    "excerpt": "B2B export buyer guide to South Indian vs North Indian granite belts, calibration tolerances, gloss meter GU standards, ISPM-15 fumigated crating, and 20ft container payload capacities.",
+    "content": `
+    <p class="text-lg font-normal text-gray-800 leading-relaxed mb-6">
+      Sourcing natural stone directly from Indian processing yards eliminates middleman markups, ensuring exact batch consistency for international distribution and commercial real estate development. Published by the export management at <strong>Vishnupriya Granite (Sadahalli Post, Bangalore North)</strong>, this guide outlines sourcing belts, quality control standards, and 20ft container logistics.
+    </p>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">1. Sourcing Belts: South Indian vs. North Indian Quarry Hubs</h3>
+    <ul class="list-disc pl-6 space-y-3 text-gray-700 mb-6">
+      <li><strong>South Indian Sourcing Belt (Bangalore / Hosur / Khammam / Ongole):</strong> World-renowned for high-density crystalline granites including Sadahalli White, Black Galaxy, Kashmir White, Tan Brown, and Absolute Black. Sourced directly from processing yards in Bangalore North near Airport Road.</li>
+      <li><strong>North Indian Sourcing Belt (Jalore / Kishangarh):</strong> Known for fine-grained pink granites, green marbles, and Rajasthan sandstones.</li>
+    </ul>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">2. Factory Quality Control Checklist</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      When inspecting export bundle lots, enforce these 4 strict manufacturing tolerances:
+    </p>
+
+    <div class="overflow-x-auto my-6">
+      <table class="w-full text-sm text-left border-collapse border border-gray-200">
+        <thead class="bg-emerald-950 text-white">
+          <tr>
+            <th class="p-3 border border-gray-300">Quality Parameter</th>
+            <th class="p-3 border border-gray-300">Export Standard Specification</th>
+            <th class="p-3 border border-gray-300">Inspection Method</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b bg-gray-50">
+            <td class="p-3 font-semibold border text-emerald-900">Thickness Calibration</td>
+            <td class="p-3 border text-amber-800 font-bold">&plusmn;1.0 mm (Calibrated Slabs)</td>
+            <td class="p-3 border text-xs">Digital vernier caliper across 8 slab edge points.</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3 font-semibold border text-emerald-900">Gloss Meter Reflection</td>
+            <td class="p-3 border text-amber-800 font-bold">&gt; 85 Gloss Units (GU)</td>
+            <td class="p-3 border text-xs">Photoelectric gloss meter reading.</td>
+          </tr>
+          <tr class="border-b bg-gray-50">
+            <td class="p-3 font-semibold border text-emerald-900">Diagonal Squaring</td>
+            <td class="p-3 border text-amber-800 font-bold">&plusmn;1.5 mm Variance</td>
+            <td class="p-3 border text-xs">Corner-to-corner laser distance measurement.</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3 font-semibold border text-emerald-900">Backing Reinforcement</td>
+            <td class="p-3 border font-bold">Epoxy Fiberglass Mesh (Where needed)</td>
+            <td class="p-3 border text-xs">Full rear surface mesh adhesion check.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="font-display text-2xl text-gray-900 mt-8 mb-4 font-semibold">3. Container Logistics & ISPM-15 Crating</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      All export bundles are secured in ISPM-15 heat-treated fumigated wooden crates with plastic corner guards and heavy-duty steel strapping. Standard 20ft heavy-duty containers carry up to 27,000 kg (approx. 420-450 sq. meters of 20mm stone). Direct FOB dispatch from Chennai / Mundra ports ensures fast transit to global destinations.
+    </p>
+
+    <div class="p-6 bg-emerald-950 text-white rounded-sm my-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>
+        <h4 class="font-display text-xl font-semibold text-amber-400 mb-1">Schedule a Live Video Factory Walkthrough</h4>
+        <p class="text-sm text-gray-300">Inspect gangsaw slicing, bundle lots, and crating live with our yard engineers in Sadahalli.</p>
+      </div>
+      <button onclick="openExportMatrixModal()" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-sm uppercase tracking-wider rounded-sm transition-colors shrink-0">
+        View Container Payload Matrix
+      </button>
+    </div>
+    `
+  },
+
   "sadahalli-white-granite-buyers-guide": {
     "slug": "sadahalli-white-granite-buyers-guide",
     "title": "Sadahalli White Granite: Ultimate Buyer's Guide, Price & Applications in Bangalore",
@@ -5533,6 +5957,134 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 
+
+
+<!-- STICKY MOBILE CONVERSION BAR -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-emerald-950 border-t border-amber-500/30 p-3 flex gap-3 md:hidden shadow-2xl">
+  <a href="tel:+919741800995" class="flex-1 bg-emerald-900 border border-amber-500/40 text-amber-300 font-bold text-xs uppercase tracking-wider py-3 rounded-sm flex items-center justify-center gap-2">
+    Call Yard
+  </a>
+  <a href="https://wa.me/919741800995?text=Hi%20Vishnupriya%20Granite%2C%20I%20need%20a%20factory-direct%20quote%20for%20granite%20slabs." target="_blank" class="flex-1 bg-amber-500 text-emerald-950 font-bold text-xs uppercase tracking-wider py-3 rounded-sm flex items-center justify-center gap-2">
+    WhatsApp Quote
+  </a>
+</div>
+
+<!-- ARCHITECT SAMPLE KIT MODAL -->
+<div id="sampleKitModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 hidden">
+  <div class="bg-emerald-950 border border-amber-500/30 p-6 md:p-8 rounded-sm max-w-lg w-full relative text-white">
+    <button onclick="closeSampleKitModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">&times;</button>
+    <div class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">Architect & Specifier Portal</div>
+    <h3 class="font-display text-2xl font-light mb-4">Request 4-Piece Stone Swatch Kit</h3>
+    <p class="text-gray-300 text-xs mb-6 leading-relaxed">Get physical 10x10 cm calibrated stone samples dispatches within 48 hours. Includes ASTM test certificates & CAD hatching files.</p>
+    <form onsubmit="event.preventDefault(); submitSampleKitRequest();" class="space-y-4">
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1">Firm / Architect Name</label>
+        <input type="text" id="skFirmName" required placeholder="e.g. Atelier Design Studio" class="w-full bg-emerald-900/60 border border-gray-700 px-3 py-2 rounded-sm text-sm text-white">
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1">Phone Number</label>
+          <input type="tel" id="skPhone" required placeholder="+91 9876543210" class="w-full bg-emerald-900/60 border border-gray-700 px-3 py-2 rounded-sm text-sm text-white">
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1">City / Location</label>
+          <input type="text" id="skCity" required placeholder="e.g. Bangalore / Chennai" class="w-full bg-emerald-900/60 border border-gray-700 px-3 py-2 rounded-sm text-sm text-white">
+        </div>
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1">Select 4 Stone Swatches Required</label>
+        <select id="skStones" class="w-full bg-emerald-900/60 border border-gray-700 px-3 py-2 rounded-sm text-sm text-white">
+          <option value="Sadahalli White, Black Galaxy, Kashmir White, Tan Brown">Sadahalli White, Black Galaxy, Kashmir White, Tan Brown</option>
+          <option value="Sadahalli White, Kota Stone, Indian Slate, Absolute Black">Sadahalli White, Kota Stone, Indian Slate, Absolute Black</option>
+          <option value="Makrana White Marble, Rainforest Gold, Jodhpur Pink, Tan Brown">Makrana White Marble, Rainforest Gold, Jodhpur Pink, Tan Brown</option>
+        </select>
+      </div>
+      <button type="submit" class="w-full py-3 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs uppercase tracking-wider rounded-sm transition-colors mt-2">
+        Dispatch Swatch Box Request
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- EXPORT & CONTAINER LOADING MATRIX MODAL -->
+<div id="exportMatrixModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 hidden">
+  <div class="bg-emerald-950 border border-amber-500/30 p-6 md:p-8 rounded-sm max-w-2xl w-full relative text-white max-h-[90vh] overflow-y-auto">
+    <button onclick="closeExportMatrixModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">&times;</button>
+    <div class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">B2B Exporter Portal</div>
+    <h3 class="font-display text-2xl font-light mb-4">20ft Container Payload & Packaging Specifications</h3>
+    <p class="text-gray-300 text-xs mb-6 leading-relaxed">Direct factory container stuffing metrics for global importers, real estate builders, and stone distributors.</p>
+    
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-xs text-left text-gray-300 border-collapse border border-gray-700">
+        <thead class="bg-emerald-900 text-amber-300 font-semibold">
+          <tr>
+            <th class="p-2 border border-gray-700">Slab Thickness</th>
+            <th class="p-2 border border-gray-700">Payload Capacity (Sq. Mtr)</th>
+            <th class="p-2 border border-gray-700">Payload Capacity (Sq. Ft)</th>
+            <th class="p-2 border border-gray-700">Max Gross Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-800">
+            <td class="p-2 border border-gray-800 font-bold text-white">18mm Calibrated Slabs</td>
+            <td class="p-2 border border-gray-800 text-amber-300 font-bold">480 &ndash; 520 Sq.M</td>
+            <td class="p-2 border border-gray-800">5,160 &ndash; 5,600 Sq.Ft</td>
+            <td class="p-2 border border-gray-800">27,000 kg (27 MT)</td>
+          </tr>
+          <tr class="border-b border-gray-800 bg-emerald-900/30">
+            <td class="p-2 border border-gray-800 font-bold text-white">20mm Gangsaw Slabs</td>
+            <td class="p-2 border border-gray-800 text-amber-300 font-bold">420 &ndash; 450 Sq.M</td>
+            <td class="p-2 border border-gray-800">4,520 &ndash; 4,840 Sq.Ft</td>
+            <td class="p-2 border border-gray-800">27,000 kg (27 MT)</td>
+          </tr>
+          <tr class="border-b border-gray-800">
+            <td class="p-2 border border-gray-800 font-bold text-white">30mm Architectural Slabs</td>
+            <td class="p-2 border border-gray-800 text-amber-300 font-bold">280 &ndash; 300 Sq.M</td>
+            <td class="p-2 border border-gray-800">3,010 &ndash; 3,230 Sq.Ft</td>
+            <td class="p-2 border border-gray-800">27,000 kg (27 MT)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bg-emerald-900/40 p-4 border border-amber-500/20 rounded-sm mb-6">
+      <h4 class="font-bold text-amber-400 text-xs uppercase tracking-wider mb-2">Export Packaging & Certification Standards</h4>
+      <ul class="text-xs text-gray-300 space-y-1.5 list-disc pl-4">
+        <li><strong>ISPM-15 Crating:</strong> Heat-treated and fumigated seaworthy wooden bundle crates with corner plastic guards.</li>
+        <li><strong>Port Logistics:</strong> Direct FOB dispatch to Chennai Port / Mundra Port; CIF quotes for US & European destination ports.</li>
+        <li><strong>Quality Compliance:</strong> Surface calibration tolerance &plusmn;1mm, gloss meter rating &gt;85 GU, waterproof plastic wrapping.</li>
+      </ul>
+    </div>
+
+    <a href="https://wa.me/919741800995?text=Hi%20Vishnupriya%20Granite%2C%20I%20would%20like%20to%20schedule%20a%20Live%20Video%20Factory%20Walkthrough%20and%20Container%20Payload%20discussion." target="_blank" class="block w-full text-center py-3 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs uppercase tracking-wider rounded-sm transition-colors">
+      Schedule Live Video Factory Walkthrough
+    </a>
+  </div>
+</div>
+
+<script>
+function openSampleKitModal() {
+  document.getElementById('sampleKitModal').classList.remove('hidden');
+}
+function closeSampleKitModal() {
+  document.getElementById('sampleKitModal').classList.add('hidden');
+}
+function submitSampleKitRequest() {
+  const firm = document.getElementById('skFirmName').value;
+  const phone = document.getElementById('skPhone').value;
+  const city = document.getElementById('skCity').value;
+  const stones = document.getElementById('skStones').value;
+  const msg = 'Hi Vishnupriya Granite, Architect Sample Kit Request from ' + firm + ' (' + city + ', Phone: ' + phone + '). Swatches required: ' + stones + '. Please arrange dispatch.';
+  window.open('https://wa.me/919741800995?text=' + encodeURIComponent(msg), '_blank');
+  closeSampleKitModal();
+}
+function openExportMatrixModal() {
+  document.getElementById('exportMatrixModal').classList.remove('hidden');
+}
+function closeExportMatrixModal() {
+  document.getElementById('exportMatrixModal').classList.add('hidden');
+}
+</script>
 
 </body>
 </html>
