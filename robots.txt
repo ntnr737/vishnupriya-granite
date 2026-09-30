@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow AI Search Engine & LLM Indexers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+Sitemap: https://vishnupriyagranite.com/sitemap.xml
 Sitemap: https://www.vishnupriyagranite.com/sitemap.xml
