@@ -908,7 +908,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hidden md:block relative">
         <div class="relative">
           <!-- Main stone card -->
-          <div onclick="openProduct('white-granite')" style="border-radius:2px;height:420px;width:100%;position:relative;overflow:hidden;cursor:pointer;">
+          <div onclick="openProduct('sadahalli-white-granite')" style="border-radius:2px;height:420px;width:100%;position:relative;overflow:hidden;cursor:pointer;">
             <img src="/product-images/white-granite.webp" alt="White Granite" decoding="async" fetchpriority="low" style="width:100%;height:100%;object-fit:cover;display:block;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.1) 60%);"></div>
             <div style="position:absolute;bottom:20px;left:20px;right:20px;border:1px solid rgba(201,168,76,0.4);padding:16px;">
@@ -1079,7 +1079,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <!-- Product Cards -->
-        <div class="product-card bg-white rounded-sm cursor-pointer" onclick="openProduct('white-granite')">
+        <div class="product-card bg-white rounded-sm cursor-pointer" onclick="openProduct('sadahalli-white-granite')">
           <div style="height:220px;position:relative;overflow:hidden;">
             <img src="/product-images/white-granite.webp" alt="Sadahalli White Granite slab quarried in Sadahalli Bangalore North" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;">
             <div style="position:absolute;inset:0;background:rgba(0,0,0,0.1);"></div>
@@ -1315,7 +1315,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Products Grid -->
     <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <div class="product-card bg-white rounded-sm cursor-pointer" data-cat="granite" onclick="openProduct('white-granite')">
+      <div class="product-card bg-white rounded-sm cursor-pointer" data-cat="granite" onclick="openProduct('sadahalli-white-granite')">
         <div style="height:260px;position:relative;overflow:hidden;">
           <img src="/product-images/white-granite.webp" alt="Sadahalli White Granite slab quarried in Sadahalli Bangalore North" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;">
           <div style="position:absolute;inset:0;background:rgba(0,0,0,0.12);"></div>
@@ -1504,7 +1504,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <div class="product-card bg-white rounded-sm cursor-pointer" data-cat="slate" onclick="openProduct('indian-slate')">
+      <div class="product-card bg-white rounded-sm cursor-pointer" data-cat="slate" onclick="openProduct('indian-multi-slate')">
         <div style="height:260px;position:relative;overflow:hidden;">
           <img src="/product-images/indian-slate.webp" alt="Indian Slate stone slab" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;">
           <div style="position:absolute;inset:0;background:rgba(0,0,0,0.18);"></div>
@@ -2020,6 +2020,21 @@ function showPage(pageName, updateRoute = true) {
 }
 
 // ===== PRODUCT DATA =====
+
+const productAliases = {
+  'white-granite': 'sadahalli-white-granite',
+  'sadahalli-white': 'sadahalli-white-granite',
+  'black-galaxy-granite': 'black-galaxy',
+  'kashmir-white-granite': 'kashmir-white',
+  'tan-brown-granite': 'tan-brown',
+  'makrana-white-marble': 'makrana-white',
+  'rainforest-gold-marble': 'rainforest-gold',
+  'jodhpur-pink-sandstone': 'jodhpur-pink',
+  'indian-slate': 'indian-multi-slate',
+  'indian-slate-stone': 'indian-multi-slate',
+  'absolute-black-granite': 'absolute-black'
+};
+
 const products = {
   'black-galaxy': {
     name: 'Black Galaxy',
@@ -2049,7 +2064,7 @@ const products = {
     bg: 'linear-gradient(135deg,#e8e0d8,#f5f0ea,#ddd5c8)',
     img: '/product-images/kashmir-white.webp'
   },
-  'white-granite': {
+  'sadahalli-white-granite': {
     name: 'Sadahalli White Granite',
     cat: 'GRANITE (FLAGSHIP LOCAL STONE)',
     origin: 'Sadahalli Post, Bangalore North',
@@ -2133,7 +2148,7 @@ const products = {
     bg: 'linear-gradient(135deg,#3a5040,#4a6050,#2a4030)',
     img: '/product-images/kota-stone.webp'
   },
-  'indian-slate': {
+  'indian-multi-slate': {
     name: 'Indian Multi-Slate',
     cat: 'SLATE',
     origin: 'Andhra Pradesh',
@@ -2164,9 +2179,10 @@ const products = {
 };
 
 function openProduct(id, updateHash = true) {
-  const p = products[id];
+  const resolvedId = productAliases[id] || id;
+  const p = products[resolvedId];
   if (!p) return;
-  const pTitle = p.name + ' - Specifications & Factory Price | Vishnupriya Granite'; if (updateHash) { setRoute('/product/' + id, pTitle); } else { document.title = pTitle; }
+  const pTitle = p.name + ' - Specifications & Factory Price | Vishnupriya Granite'; if (updateHash) { setRoute('/product/' + resolvedId, pTitle); } else { document.title = pTitle; }
   document.getElementById('pdName').textContent = p.name;
   document.getElementById('pdCat').textContent = p.cat;
   document.getElementById('pdOrigin').textContent = p.origin;
@@ -2425,7 +2441,8 @@ function handleRoute() {
   }
 
   if (route.startsWith('/product/')) {
-    const productId = route.replace('/product/', '');
+    const rawId = route.replace('/product/', '');
+    const productId = productAliases[rawId] || rawId;
     if (products && products[productId]) {
       openProduct(productId, false);
       return;
