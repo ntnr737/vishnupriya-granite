@@ -2182,7 +2182,16 @@ function openProduct(id, updateHash = true) {
   const resolvedId = productAliases[id] || id;
   const p = products[resolvedId];
   if (!p) return;
-  const pTitle = p.name + ' - Specifications & Factory Price | Vishnupriya Granite'; if (updateHash) { setRoute('/product/' + resolvedId, pTitle); } else { document.title = pTitle; }
+  const pTitle = p.name + ' - Specifications & Factory Price | Vishnupriya Granite';
+  const targetUrl = '/product/' + resolvedId;
+  if (updateHash) {
+    setRoute(targetUrl, pTitle);
+  } else {
+    document.title = pTitle;
+    if (window.location.pathname !== targetUrl) {
+      window.history.replaceState({ page: 'product-detail', id: resolvedId }, pTitle, targetUrl);
+    }
+  }
   document.getElementById('pdName').textContent = p.name;
   document.getElementById('pdCat').textContent = p.cat;
   document.getElementById('pdOrigin').textContent = p.origin;
@@ -6033,7 +6042,16 @@ function openBlog(slug, updateHash = true) {
   const b = blogsData[slug];
   if (!b) return;
   
-  const bTitle = b.title + ' | Vishnupriya Granite'; if (updateHash) { setRoute('/blog/' + slug, bTitle); } else { document.title = bTitle; }
+  const bTitle = b.title + ' | Vishnupriya Granite';
+  const targetUrl = '/blog/' + slug;
+  if (updateHash) {
+    setRoute(targetUrl, bTitle);
+  } else {
+    document.title = bTitle;
+    if (window.location.pathname !== targetUrl) {
+      window.history.replaceState({ page: 'blog-detail', slug: slug }, bTitle, targetUrl);
+    }
+  }
   
   document.getElementById('bdCategory').textContent = b.categoryName;
   document.getElementById('bdTitle').textContent = b.title;
