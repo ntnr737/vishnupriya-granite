@@ -6059,7 +6059,7 @@ function openBlog(slug, updateHash = true) {
     "@type": "BlogPosting",
     "headline": b.title,
     "description": b.excerpt,
-    "image": "https://vishnupriyagranite.com/" + b.img,
+    "image": "https://vishnupriyagranite.com" + (b.img.startsWith('/') ? b.img : '/' + b.img),
     "author": { "@type": "Person", "name": b.author },
     "publisher": {
       "@type": "Organization",
